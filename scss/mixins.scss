@@ -1,0 +1,164 @@
+                                            // +=+=+=+=+=+ MIXINS +=+=+=+=+=+ //
+
+// Contains mixins that hold the most frequently used CSS properties. Use the lazy.mixins.scss file to write less code by copying and pasting pre-written @include directives & their parameters into your scss rules.
+
+// If you're finding it hard to figure out why your HTML elements aren't being styled the way you want don't forget to check the other modules.
+
+// UNIVERSAL SELECTOR                           
+
+@mixin universalStyles {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fontParagraphs;
+    text-decoration: none;
+}
+
+// GRID 
+
+@mixin gridContainerStyles($cols, $rows) {
+    grid-template-columns: $cols;
+    grid-template-rows: $rows;
+}
+
+@mixin gridItemStyles($col, $row) {
+    grid-column: $col;
+    grid-row: $row;
+} 
+
+// FLEXBOX
+
+@mixin flexContainerStyles($direction, $wrp, $justify, $align) {
+    flex-direction: $direction;
+    flex-wrap: $wrp;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flexItemStyles($grow, $align) {
+    flex-grow: $grow;
+    align-self: $align;
+}
+
+// DISPLAY
+
+@mixin displayStyles($disp) {
+    display: $disp;
+}
+
+// MARGIN
+   
+@mixin marginStyles($margin) {
+    margin: $margin;
+}
+
+// PADDING
+
+@mixin paddingStyles($padding) {
+    padding: $padding;
+}
+
+// POSITIONING
+
+@mixin positionStyles($pos) {
+
+    @if $pos == fixed {
+    position: $pos; 
+    z-index: 1;
+    top: 0; 
+    left: 0;
+    }
+
+    @else {
+    position: $pos; 
+    }
+
+}
+
+// WIDTH & HEIGHT
+
+@mixin widthStyles($wide) {
+    width: $wide;
+}
+
+@mixin heightStyles($high) {
+    height: $high;
+}
+
+// BORDER
+
+@mixin borderStyles($border, $radius, $outline) {
+    border: $border;
+    border-radius: $radius;
+    outline: $outline;
+}
+
+// FONTS & TEXT
+
+@mixin fontStyles($family, $weight, $size) {
+    font-family: $family;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+@mixin textStyles($spacing, $height, $transform, $decor) {
+    letter-spacing: $spacing;
+    line-height: $height;
+    text-transform: $transform;
+    text-decoration: $decor;
+}
+
+// COLORS
+
+@mixin colorStyles($bgcolor, $color) {
+    background-color: $bgcolor;
+    color: $color
+}
+
+// BACKGROUND IMAGES
+
+@mixin bgImageStyles($repeat, $pos, $size, $atch) {
+    background-repeat: $repeat;
+    background-position: $pos;
+    background-size: $size;
+    background-attachment: $atch;
+}
+
+// HORIZONTAL RULES 
+
+@mixin hrStyles ($margin, $width, $border) {
+    margin: $margin;
+    width:  $width;
+    border: $border;
+    border-bottom: none;
+}
+
+// BOX SHADOWS
+
+@mixin boxShadowStyles($shade) {
+    box-shadow: $shade;
+}
+
+// TRANSITIONS
+
+@mixin transitionStyles($trans) {
+    transition: $trans;
+}
+
+// TRANSFORMS
+
+@mixin transformStyles($trans) {
+    transform: $trans;
+}
+
+// ANIMATIONS
+
+// @mixin vendors {
+//     transform: $trans;
+// }
+
+// VENDOR PREFIXES
+
+// @mixin vendors {
+//     transform: $trans;
+// }

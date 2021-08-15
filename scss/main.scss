@@ -1,0 +1,373 @@
+// Import Statements
+
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "generalstyles";
+
+/* Navigation Bar */
+
+nav#navigation {
+
+    @include flexContainerStyles(row, wrap, space-around, stretch);
+    @include paddingStyles(5px);
+    @include positionStyles(fixed);
+    @include widthStyles(100%);
+    @include colorStyles(#fff, inherit);
+    @include boxShadowStyles($boxShadowLight);
+
+        div#nav-logo-container {
+            @include displayStyles(inline-block);
+        }
+
+        div#nav-logo-container img {
+            @include positionStyles(relative);
+            top: 4px;
+        }
+
+        div#nav-links-container {
+
+            @include displayStyles(inline-block);
+        
+                a {
+                    @include displayStyles(inline-block);
+                    @include marginStyles(10px 5px);
+                    @include paddingStyles(10px);
+                    @include borderStyles(none, 4px, none);
+                    @include fontStyles($fontNavLinks, bold, 14.5px);
+                    @include textStyles(1px, auto, none, none);
+                    @include transitionStyles(0.3s ease);
+                    @include colorStyles(none, $colorMain);
+
+                        &:hover {
+                            @include colorStyles(#eee, $colorMain);
+                        }
+                }
+          
+                a#cta {
+                    margin-left: 100px;
+                    font-weight: bold;
+                    @include colorStyles($colorMain, white);
+                }
+
+        }
+    
+}
+
+/* Page Banner Section */
+
+section#page-banner {
+
+// See also generalstyles module
+
+    // @include gridContainerStyles($cols, $rows);
+    @include paddingStyles(50px 10px 150px 10px);
+    // @include bgImageStyles($repeat, $pos, $size, $atch);
+
+    div {
+
+        // @include gridItemStyles($col, $row);
+
+            p {
+                width: 50%;
+            }
+
+    }
+
+}
+
+/* Display Cards (3)  */
+
+section#display_3 {
+
+    @include paddingStyles(0 0 50px 0);
+    // background-color: $colorMain;
+
+        div {
+            @include flexContainerStyles(row, wrap, center, stretch);
+            overflow: visible;
+        }
+
+        div.card {      
+            @include marginStyles(20px);
+            // @include paddingStyles(5px); 
+            // @include positionStyles(relative);
+            bottom: 170px;
+            @include widthStyles($c4); 
+            @include borderStyles(none, 0, none);
+            @include colorStyles(none, inherit); 
+            // @include boxShadowStyles($boxShadowLight);
+
+            // &:nth-child(2) {      
+            //     bottom: 120px;
+            // }
+
+                // img {
+                //     border-radius: 4px;
+             
+                // }
+
+                h3 {
+                    @include marginStyles(5px auto);
+                    @include fontStyles($fontHeadings, bold, 23px);
+                    @include textStyles(0.5px, 40px, none, none);
+                    @include colorStyles(none, $colorMain);
+                }
+
+                p {
+                    @include marginStyles(5px 15px);
+                    @include fontStyles($fontParagraphs, normal, 16px);
+                    @include textStyles(1px, 25px, none, none);
+                }
+        }
+
+}
+
+/* Duo  */
+
+section#duo {
+
+    @include flexContainerStyles(row, wrap, space-evenly, stretch);
+    background-color: $colorMain;
+
+        div.container_text, div.container_img {
+            @include marginStyles(0);
+            @include widthStyles(50%);
+        }
+
+        div.container_text {
+
+            @include flexContainerStyles(column, wrap, center, center);
+            @include paddingStyles(100px 0);
+          
+                h2 {
+                    @include marginStyles(10px auto);
+                    @include fontStyles($fontHeadings, normal, 40px);
+                    @include textStyles(0.2px, 40px, none, none);
+                    @include colorStyles(none, $colorSecond);
+                }
+
+                hr {
+                    @include hrStyles(20px auto, 90%, 1px solid rgba(255, 255, 255, 0.5));
+                }
+
+                p {
+                    @include marginStyles(15px auto);
+                    @include paddingStyles(0 25px 0 25px);
+                    @include fontStyles($fontParagraphs, normal, 16px);
+                    @include textStyles(1px, 25px, none, none);
+                    @include colorStyles(none, $colorSecond);
+                }
+
+                a {
+                    @include marginStyles(20px auto);
+                    @include paddingStyles(10px); 
+                    @include borderStyles(none, 2px, none);
+                    @include fontStyles($fontSubheadings, bold, 18px);
+                    @include textStyles(2px, 25px, none, none);
+                    @include colorStyles(none, $colorSecond);
+                }
+
+        }
+
+        div.container_img {
+
+            img {
+                // @include widthStyles(100%);
+                @include heightStyles(100%);
+            }
+
+        }
+               
+}
+
+/* Display Cards (2)  */
+
+section#display_2 {
+
+    @include paddingStyles(100px 0 200px 0);
+
+        h2 {
+            @include marginStyles(20px auto); 
+            @include fontStyles($fontHeadings, bold, 40px); 
+            @include textStyles(0.5px, inherit, none, none);
+            @include colorStyles(none, $colorMain); 
+        }
+
+        div {
+            @include flexContainerStyles(row, wrap, center, stretch);
+            overflow: visible;
+        }
+
+        div.card {      
+            @include marginStyles(20px);
+            // @include positionStyles(relative);
+            top: 50px;
+            @include widthStyles(45%); 
+            @include borderStyles(none, 0, none);
+            @include colorStyles(none, inherit); 
+            // @include boxShadowStyles($boxShadowLight);
+
+            &:nth-child(2) {      
+                top: 150px;
+            }
+
+                // img {
+                //     border-radius: 4px;
+                //     @include widthStyles(100%);
+                // }
+
+                h3 {
+                    @include marginStyles(10px auto);
+                    @include fontStyles($fontHeadings, bold, 30px);
+                    @include textStyles(0.5px, 40px, none, none);
+                    @include colorStyles(none, $colorMain);
+                }
+
+                hr {
+                    @include hrStyles(20px auto, 90%, 1px solid $colorMain);
+                }
+
+                p {
+                    @include marginStyles(15px auto);
+                    @include paddingStyles(0 5px);
+                    @include fontStyles($fontParagraphs, normal, 16px);
+                    @include textStyles(1px, 25px, none, none);
+                }
+        }
+
+}
+
+/* Other Banner */
+
+section#other-banner {
+
+        background-image: url(../images/ship.jpg);
+        @include bgImageStyles(no-repeat, center, cover, scroll);
+        width: 100%;
+        height: 700px;
+
+}
+
+/* Footer Section */
+
+footer {
+    @include paddingStyles(50px 0 5px 0);
+    @include colorStyles(black, $colorOnBlack);
+
+        nav#footer-nav {
+            @include marginStyles(0 auto);
+            @include flexContainerStyles(row, wrap, center, stretch);
+            @include marginStyles(0 auto);
+             
+                 div.column {
+                     @include displayStyles(inline-block);
+                     @include marginStyles(10px 60px);
+                     @include paddingStyles(0);
+                     @include widthStyles(150px);
+
+                        &:nth-child(4) {
+                            margin-right: 0;
+                        }
+
+                        h4 {
+                            @include displayStyles(block);
+                            @include marginStyles(20px 0);
+                            @include fontStyles($fontSubheadings, normal, 16px);
+                            @include textStyles(1px, inherit, uppercase, none);
+                            @include colorStyles(none, grey);
+                        }
+            
+                        a {
+                            @include displayStyles(block);
+                            @include marginStyles(15px 0);
+                            @include paddingStyles(0);
+                            @include fontStyles($fontParagraphs, normal, 14px);
+                            @include textStyles(0.5px, inherit, none, none);
+                            @include colorStyles(none, #eee);
+                            @include transitionStyles(0.3s ease-in-out);
+            
+                                sup {
+                                    font-size: 8px;
+                                }
+            
+                                span {
+                                    color: orangered; 
+                                }
+            
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                        }
+        
+                 }
+                 
+        }
+
+        hr {
+            @include hrStyles(20px auto, 90%, 1px solid rgba(77, 77, 77, 0.8));
+        }
+
+        div#social {
+
+            @include flexContainerStyles(row, wrap, space-around, stretch);
+
+                div#social-media-container {
+                    align-self: center;
+        
+                        a {
+                            @include displayStyles(inline-block);
+                            @include marginStyles(0 10px 0 10px); 
+                            @include paddingStyles(5px); 
+                            @include colorStyles(none, none); 
+                        }
+                }
+        }
+
+        div#footer-logo-container img {
+            @include displayStyles(block);
+            @include marginStyles(0 auto); 
+        }
+
+        p#copyright {
+            @include marginStyles(2px 0 0 0); 
+            @include fontStyles($fontParagraphs, normal, 12px); 
+            @include colorStyles(none, grey); 
+            text-align: right;
+            align-self: center;
+            // The align self property is used when the paragraph...
+            // is added to the social flex container.
+        }
+
+}
+
+/***** MEDIA QUERIES *****/
+
+@media screen and (max-width: 877px) {
+
+    footer {
+        padding-bottom: 50px;
+    }
+
+    div.column h4 {
+    text-align: center;
+    }
+
+    div.column a {
+     text-align: center;
+    }
+
+    footer div#social {
+        @include flexContainerStyles(column, wrap, center, center);
+
+            div#social-media-container, div#footer-logo-container img, p#copyright {
+                @include marginStyles(5px auto);
+            }
+
+            p#copyright {
+                text-align: center;
+                order: 5;
+            }
+    }
+
+}

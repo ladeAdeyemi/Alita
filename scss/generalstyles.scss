@@ -1,0 +1,87 @@
+                                        // +=+=+=+=+=+ GENERAL STYLES +=+=+=+=+=+ //
+
+// These classes are meant to be shared across all your projects. If you're finding it hard to figure out why your HTML elements aren't being styled the way you want don't forget to check the other modules.
+
+// Import Statements
+
+@import "variables";
+@import "mixins";
+
+/* Universal selector, body tag */
+
+* {
+    @include universalStyles;
+  }
+  
+body {
+    @include colorStyles(white, $colorOnWhite);
+}
+
+img {
+    display: block;
+    @include widthStyles(100%);
+}
+
+/* General Use Classes */
+
+.align-c {
+    text-align: center;
+}
+
+.align-l {
+    text-align: left;
+}
+
+.align-r {
+    text-align: right;
+}
+
+.banner {
+    @include widthStyles(100%);
+}
+
+.banner-headline {
+    @include marginStyles(150px 0 20px 150px);
+    @include fontStyles($fontHeadings, auto, 55px);
+    @include textStyles(0.5px, 55px, auto, none);
+    @include colorStyles(none, $colorMain);
+}
+
+.banner-text {
+    @include marginStyles(5px 5px 5px 150px);
+    @include paddingStyles(10px);
+    @include fontStyles($fontParagraphs, normal, 18px);
+    @include textStyles(1px, 30px, none, none);
+}
+
+.collapsed {
+    height: 0;
+}
+
+.flex {
+    // -webkit-box-flex: flex;
+    // -moz-box-flex: flex;
+    // -ms-flex: flex;
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.hidden {
+    visibility: none;
+}
+
+.on-black {
+    @include colorStyles(none, $colorOnBlack);
+}
+
+.on-white {
+    @include colorStyles(none, $colorOnWhite);
+}
+
+.rule {
+    @include displayStyles(block);
+}
+

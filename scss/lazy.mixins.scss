@@ -1,0 +1,25 @@
+                                        // +=+=+=+=+=+ LAZY MIXINS +=+=+=+=+=+ //
+                          
+// Copy & paste the below group into all your scss/css rules to save time typing out @include directives and their individual parameters;
+// Delete un-needed mixins from scss rules as necessary;
+// Reduce the amount of code written to just css values by passing them into the mixin parameters as arguments;
+// Maintain consistent logical top to bottom flow of scss / css rules (margin, then padding, then positioning etc);
+
+@include gridContainerStyles($cols, $rows);
+@include gridItemStyles($col, $row);
+@include flexContainerStyles($direction, $wrp, $justify, $align); 
+@include flexItemStyles($grow, $align); 
+@include displayStyles($disp);
+@include marginStyles($margin); 
+@include paddingStyles($padding); 
+@include positionStyles($pos, $z); 
+@include widthStyles($wide); 
+@include heightStyles($high); 
+@include borderStyles($border, $radius, $outline);
+@include fontStyles($family, $weight, $size); 
+@include textStyles($spacing, $height, $transform, $decor);
+@include colorStyles($bgcolor, $color); 
+@include bgImageStyles($repeat, $pos, $size, $atch);
+@include hrStyles($margin, $width, $border); 
+@include boxShadowStyles($shade); 
+@include transitionStyles($trans);
