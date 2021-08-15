@@ -1,6 +1,12 @@
 /* FONTS */
 
 @font-face {
+    src: url(../fonts/gilroy-extrabold.otf) format('opentype');
+    font-family: "Gilroy";
+    font-display: block;
+}
+
+@font-face {
     src: url(../fonts/gilroy-light.otf) format('opentype');
     font-family: "Gilroy Light";
     font-display: block;
@@ -11,9 +17,3 @@
     font-family: "Sarabun";
     font-display: block;
 }
-
-// @font-face {
-//     src: url(../fonts/Source-Sans-Pro-Regular.ttf) format('truetype');
-//     font-family: "Source Sans Pro";
-//     font-display: block;
-// }

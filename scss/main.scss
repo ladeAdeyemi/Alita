@@ -12,9 +12,10 @@ nav#navigation {
     @include flexContainerStyles(row, wrap, space-around, stretch);
     @include paddingStyles(5px);
     @include positionStyles(fixed);
+    @include borderStyles(1px solid lightgrey, none, none);
     @include widthStyles(100%);
     @include colorStyles(#fff, inherit);
-    @include boxShadowStyles($boxShadowLight);
+    // @include boxShadowStyles($boxShadowLight);
 
         div#nav-logo-container {
             @include displayStyles(inline-block);
@@ -109,8 +110,8 @@ section#display_3 {
 
                 h3 {
                     @include marginStyles(5px auto);
-                    @include fontStyles($fontHeadings, bold, 23px);
-                    @include textStyles(0.5px, 40px, none, none);
+                    @include fontStyles($fontHeadings, bold, 20px);
+                    @include textStyles(0.5px, 30px, none, none);
                     @include colorStyles(none, $colorMain);
                 }
 
@@ -138,7 +139,7 @@ section#duo {
         div.container_text {
 
             @include flexContainerStyles(column, wrap, center, center);
-            @include paddingStyles(100px 0);
+            @include paddingStyles(150px 0);
           
                 h2 {
                     @include marginStyles(10px auto);
@@ -152,19 +153,19 @@ section#duo {
                 }
 
                 p {
-                    @include marginStyles(15px auto);
-                    @include paddingStyles(0 25px 0 25px);
+                    @include marginStyles(25px auto);
+                    @include paddingStyles(0 30px);
                     @include fontStyles($fontParagraphs, normal, 16px);
                     @include textStyles(1px, 25px, none, none);
                     @include colorStyles(none, $colorSecond);
                 }
 
                 a {
-                    @include marginStyles(20px auto);
+                    @include marginStyles(10px auto);
                     @include paddingStyles(10px); 
-                    @include borderStyles(none, 2px, none);
-                    @include fontStyles($fontSubheadings, bold, 18px);
-                    @include textStyles(2px, 25px, none, none);
+                    @include borderStyles(1px solid $colorSecond, 0, none);
+                    @include fontStyles($fontSubheadings, bold, 16px);
+                    @include textStyles(0.5px, 25px, uppercase, none);
                     @include colorStyles(none, $colorSecond);
                 }
 
@@ -185,10 +186,10 @@ section#duo {
 
 section#display_2 {
 
-    @include paddingStyles(100px 0 200px 0);
+    @include paddingStyles(50px 0 100px 0);
 
         h2 {
-            @include marginStyles(20px auto); 
+            @include marginStyles(40px auto); 
             @include fontStyles($fontHeadings, bold, 40px); 
             @include textStyles(0.5px, inherit, none, none);
             @include colorStyles(none, $colorMain); 
@@ -202,15 +203,15 @@ section#display_2 {
         div.card {      
             @include marginStyles(20px);
             // @include positionStyles(relative);
-            top: 50px;
+            // top: 50px;
             @include widthStyles(45%); 
             @include borderStyles(none, 0, none);
             @include colorStyles(none, inherit); 
             // @include boxShadowStyles($boxShadowLight);
 
-            &:nth-child(2) {      
-                top: 150px;
-            }
+            // &:nth-child(2) {      
+            //     top: 150px;
+            // }
 
                 // img {
                 //     border-radius: 4px;
@@ -219,7 +220,7 @@ section#display_2 {
 
                 h3 {
                     @include marginStyles(10px auto);
-                    @include fontStyles($fontHeadings, bold, 30px);
+                    @include fontStyles($fontHeadings, bold, 22px);
                     @include textStyles(0.5px, 40px, none, none);
                     @include colorStyles(none, $colorMain);
                 }
@@ -253,7 +254,7 @@ section#other-banner {
 
 footer {
     @include paddingStyles(50px 0 5px 0);
-    @include colorStyles(black, $colorOnBlack);
+    @include colorStyles($colorSecond, $colorMain);
 
         nav#footer-nav {
             @include marginStyles(0 auto);
@@ -273,9 +274,9 @@ footer {
                         h4 {
                             @include displayStyles(block);
                             @include marginStyles(20px 0);
-                            @include fontStyles($fontSubheadings, normal, 16px);
+                            @include fontStyles($fontNavLinks, normal, 16px);
                             @include textStyles(1px, inherit, uppercase, none);
-                            @include colorStyles(none, grey);
+                            @include colorStyles(none, $colorMain);
                         }
             
                         a {
@@ -284,7 +285,7 @@ footer {
                             @include paddingStyles(0);
                             @include fontStyles($fontParagraphs, normal, 14px);
                             @include textStyles(0.5px, inherit, none, none);
-                            @include colorStyles(none, #eee);
+                            @include colorStyles(none, $colorMain);
                             @include transitionStyles(0.3s ease-in-out);
             
                                 sup {
@@ -305,7 +306,7 @@ footer {
         }
 
         hr {
-            @include hrStyles(20px auto, 90%, 1px solid rgba(77, 77, 77, 0.8));
+            @include hrStyles(20px auto, 90%, 1px solid $colorMain);
         }
 
         div#social {
@@ -332,7 +333,7 @@ footer {
         p#copyright {
             @include marginStyles(2px 0 0 0); 
             @include fontStyles($fontParagraphs, normal, 12px); 
-            @include colorStyles(none, grey); 
+            @include colorStyles(none, $colorMain); 
             text-align: right;
             align-self: center;
             // The align self property is used when the paragraph...
