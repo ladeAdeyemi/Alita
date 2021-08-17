@@ -83,18 +83,20 @@ section#page-banner {
 /* Trusted By */
 
 section#trusted {
-    padding: 40px;
+
+    padding: 40px 40px 0 40px;
+    // @include bgImageStyles(url(../images/ismail-enes-ayhan-lVZjvw-u9V8-unsplash.png), no-repeat, center, cover, scroll);
     // background-color: black;
 
         h2 {
-            @include marginStyles(10px auto); 
+            @include marginStyles(25px auto); 
             @include fontStyles($fontHeadings, bold, 40px); 
             @include textStyles(inherit, inherit, none, none);
             @include colorStyles(none, $colorMain); 
         }
 
         p {
-            @include marginStyles(20px auto);
+            @include marginStyles(10px auto);
             @include fontStyles($fontParagraphs, normal, 16px);
             @include textStyles(1px, 25px, none, none);
             @include colorStyles(none, $colorOnWhite);
@@ -102,7 +104,7 @@ section#trusted {
 
         ul {
             @include flexContainerStyles(row, wrap, space-evenly, stretch); 
-            @include marginStyles(20px auto); 
+            @include marginStyles(5px auto); 
             @include paddingStyles(5px); 
 
             li {
@@ -115,53 +117,45 @@ section#trusted {
                     // }
             }
         }
-}
 
-/* Display Cards (3)  */
-
-section#display_3 {
-
-    @include paddingStyles(100px 0);
-    // background-color: $colorMain;
-
-        div {
+        div.flex {
             @include flexContainerStyles(row, wrap, center, stretch);
-            overflow: visible;
-        }
+            @include paddingStyles(20px 0 100px 0);
 
-        div.card {      
-            @include marginStyles(20px);
-            // @include paddingStyles(5px); 
-            // @include positionStyles(relative);
-            bottom: 170px;
-            @include widthStyles($c4); 
-            @include borderStyles(none, 0, none);
-            @include colorStyles(none, inherit); 
-            @include boxShadowStyles($boxShadowDark);
-
-            // &:nth-child(2) {      
-            //     bottom: 120px;
-            // }
-
-                // img {
-                //     border-radius: 4px;
-             
+            div.card {      
+                @include marginStyles(20px);
+                // @include paddingStyles(5px); 
+                // @include positionStyles(relative);
+                bottom: 170px;
+                @include widthStyles($c4); 
+                @include borderStyles(none, 0, none);
+                @include colorStyles(none, inherit); 
+                // @include boxShadowStyles($boxShadowDark);
+    
+                // &:nth-child(2) {      
+                //     bottom: 120px;
                 // }
+    
+                    // img {
+                    //     border-radius: 4px;
+                 
+                    // }
+    
+                    h3 {
+                        @include marginStyles(5px auto);
+                        @include fontStyles($fontHeadings, bold, 20px);
+                        @include textStyles(0.5px, 30px, none, none);
+                        @include colorStyles(none, $colorMain);
+                    }
+    
+                    p {
+                        @include marginStyles(5px 15px);
+                        @include fontStyles($fontParagraphs, normal, 16px);
+                        @include textStyles(1px, 25px, none, none);
+                    }
+            }
 
-                h3 {
-                    @include marginStyles(5px auto);
-                    @include fontStyles($fontHeadings, bold, 20px);
-                    @include textStyles(0.5px, 30px, none, none);
-                    @include colorStyles(none, $colorMain);
-                }
-
-                p {
-                    @include marginStyles(5px 15px);
-                    @include fontStyles($fontParagraphs, normal, 16px);
-                    @include textStyles(1px, 25px, none, none);
-                }
         }
-
 }
 
 /* Threat Report Section  */
