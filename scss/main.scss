@@ -118,44 +118,53 @@ section#trusted {
             }
         }
 
-        div.flex {
+}
+
+/* Display Cards (3)  */
+
+section#display_3 {
+
+    @include paddingStyles(100px 0);
+    // background-color: $colorMain;
+
+        div {
             @include flexContainerStyles(row, wrap, center, stretch);
-            @include paddingStyles(20px 0);
-
-            div.card {      
-                @include marginStyles(20px);
-                // @include paddingStyles(5px); 
-                // @include positionStyles(relative);
-                bottom: 170px;
-                @include widthStyles($c4); 
-                @include borderStyles(none, 0, none);
-                @include colorStyles(none, inherit); 
-                // @include boxShadowStyles($boxShadowDark);
-    
-                // &:nth-child(2) {      
-                //     bottom: 120px;
-                // }
-    
-                    // img {
-                    //     border-radius: 4px;
-                 
-                    // }
-    
-                    h3 {
-                        @include marginStyles(5px auto);
-                        @include fontStyles($fontHeadings, bold, 20px);
-                        @include textStyles(0.5px, 30px, none, none);
-                        @include colorStyles(none, $colorMain);
-                    }
-    
-                    p {
-                        @include marginStyles(5px 15px);
-                        @include fontStyles($fontParagraphs, normal, 16px);
-                        @include textStyles(1px, 25px, none, none);
-                    }
-            }
-
+            overflow: visible;
         }
+
+        div.card {      
+            @include marginStyles(20px);
+            // @include paddingStyles(5px); 
+            // @include positionStyles(relative);
+            bottom: 170px;
+            @include widthStyles($c4); 
+            @include borderStyles(none, 0, none);
+            @include colorStyles(none, inherit); 
+            @include boxShadowStyles($boxShadowDark);
+
+            // &:nth-child(2) {      
+            //     bottom: 120px;
+            // }
+
+                // img {
+                //     border-radius: 4px;
+             
+                // }
+
+                h3 {
+                    @include marginStyles(5px auto);
+                    @include fontStyles($fontHeadings, bold, 20px);
+                    @include textStyles(0.5px, 30px, none, none);
+                    @include colorStyles(none, $colorMain);
+                }
+
+                p {
+                    @include marginStyles(5px 15px);
+                    @include fontStyles($fontParagraphs, normal, 16px);
+                    @include textStyles(1px, 25px, none, none);
+                }
+        }
+
 }
 
 /* Threat Report Section  */
