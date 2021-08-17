@@ -251,7 +251,7 @@ section#trusted div.flex {
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
-  padding: 20px 0 100px 0;
+  padding: 20px 0;
 }
 section#trusted div.flex div.card {
   margin: 20px;

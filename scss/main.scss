@@ -120,7 +120,7 @@ section#trusted {
 
         div.flex {
             @include flexContainerStyles(row, wrap, center, stretch);
-            @include paddingStyles(20px 0 100px 0);
+            @include paddingStyles(20px 0);
 
             div.card {      
                 @include marginStyles(20px);
