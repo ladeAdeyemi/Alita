@@ -118,6 +118,7 @@ section#trusted {
 }
 
 /* Display Cards (3)  */
+<<<<<<< HEAD
 
 section#display_3 {
 
@@ -135,6 +136,14 @@ section#display_3 {
     // background-color: $colorMain;
 
 =======
+>>>>>>> parent of 4c0c8d1... Section#display-cards-3 was merged into section#trusted and the text in each div.card was altered to fit the message of the overall section
+=======
+
+section#display_3 {
+
+    @include paddingStyles(100px 0);
+    // background-color: $colorMain;
+
 >>>>>>> parent of 4c0c8d1... Section#display-cards-3 was merged into section#trusted and the text in each div.card was altered to fit the message of the overall section
         div {
             @include flexContainerStyles(row, wrap, center, stretch);

@@ -257,7 +257,11 @@ section#display_3 div {
   justify-content: center;
   align-items: stretch;
 <<<<<<< HEAD
+<<<<<<< HEAD
   padding: 20px 0;
+=======
+  overflow: visible;
+>>>>>>> parent of 4c0c8d1... Section#display-cards-3 was merged into section#trusted and the text in each div.card was altered to fit the message of the overall section
 =======
   overflow: visible;
 >>>>>>> parent of 4c0c8d1... Section#display-cards-3 was merged into section#trusted and the text in each div.card was altered to fit the message of the overall section
