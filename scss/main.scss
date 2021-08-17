@@ -66,11 +66,15 @@ section#page-banner {
     @include marginStyles(60px 0 0 0);
     @include paddingStyles(50px 10px 150px 10px);
     // @include gridContainerStyles($cols, $rows);
-    @include bgImageStyles(url(../images/mathew.jpg), no-repeat, center, cover, scroll);
+    @include bgImageStyles(url(../images/stream.jpg), no-repeat, center, cover, scroll);
 
     div {
 
         // @include gridItemStyles($col, $row);
+
+            h1, p {
+                @include colorStyles(none, $colorSecond);
+            }
 
             p {
                 width: 50%;
@@ -80,74 +84,134 @@ section#page-banner {
 
 }
 
-/* Trusted By */
+/* Display Cards (2)  */
 
-section#trusted {
-    padding: 40px;
-    // background-color: black;
+section#display_2 {
+
+    @include paddingStyles(50px 0 100px 0);
 
         h2 {
-            @include marginStyles(10px auto); 
+            @include marginStyles(40px 0 70px 0); 
             @include fontStyles($fontHeadings, bold, 40px); 
-            @include textStyles(inherit, inherit, none, none);
+            @include textStyles(0.5px, inherit, none, none);
             @include colorStyles(none, $colorMain); 
         }
 
-        p {
-            @include marginStyles(20px auto);
-            @include fontStyles($fontParagraphs, normal, 16px);
-            @include textStyles(1px, 25px, none, none);
-            @include colorStyles(none, $colorOnWhite);
-        }
-
-        ul {
-            @include flexContainerStyles(row, wrap, space-evenly, stretch); 
-            @include marginStyles(20px auto); 
-            @include paddingStyles(5px); 
-
-            li {
-                    @include marginStyles(10px); 
-                    @include paddingStyles(5px);
-                    @include widthStyles(15%);  
-                
-                    // img {
-
-                    // }
-            }
-        }
-}
-
-/* Display Cards (3)  */
-<<<<<<< HEAD
-
-section#display_3 {
-
-    @include paddingStyles(100px 0);
-    // background-color: $colorMain;
-
-<<<<<<< HEAD
-}
-
-/* Display Cards (3)  */
-
-section#display_3 {
-
-    @include paddingStyles(100px 0);
-    // background-color: $colorMain;
-
-=======
->>>>>>> parent of 4c0c8d1... Section#display-cards-3 was merged into section#trusted and the text in each div.card was altered to fit the message of the overall section
-=======
-
-section#display_3 {
-
-    @include paddingStyles(100px 0);
-    // background-color: $colorMain;
-
->>>>>>> parent of 4c0c8d1... Section#display-cards-3 was merged into section#trusted and the text in each div.card was altered to fit the message of the overall section
         div {
             @include flexContainerStyles(row, wrap, center, stretch);
-            overflow: visible;
+        }
+
+        div.card {      
+            @include marginStyles(20px);
+            // @include positionStyles(relative);
+            // top: 50px;
+            @include widthStyles(45%); 
+            @include borderStyles(none, 0, none);
+            @include colorStyles(none, none); 
+            // @include boxShadowStyles($boxShadowLight);
+
+            // &:nth-child(2) {      
+            //     top: 150px;
+            // }
+
+                // img {
+                //     border-radius: 4px;
+                //     @include widthStyles(100%);
+                // }
+
+                h3 {
+                    @include marginStyles(10px auto);
+                    @include fontStyles($fontHeadings, bold, 22px);
+                    @include textStyles(0.5px, 40px, none, none);
+                    @include colorStyles(none, $colorFinal);
+                }
+
+                hr {
+                    @include hrStyles(20px auto, 90%, 1px solid $colorMain);
+                }
+
+                p {
+                    @include marginStyles(15px auto);
+                    @include paddingStyles(0 5px);
+                    @include fontStyles($fontParagraphs, normal, 16px);
+                    @include textStyles(1px, 25px, none, none);
+                }
+        }
+
+        a {
+            @include colorStyles($colorMain, $colorSecond);
+        }
+
+}
+
+/* Stats*/
+
+section#stats {
+
+    // padding: 100px 0;
+    // background-color: #eee;
+
+    div.container_outer {
+
+        @include flexContainerStyles(row, wrap, space-evenly, center); 
+
+            div.container_inner.flex {
+                @include flexContainerStyles(column, wrap, center, center); 
+            }
+
+            div.container_inner {
+                @include paddingStyles(10px); 
+                width: 45%;
+
+                h2, span {
+                    @include marginStyles(20px auto); 
+                    @include paddingStyles(5px); 
+                    @include textStyles(0.5px, inherit, none, none);
+                    @include colorStyles(none, $colorMain); 
+                }
+
+                h2 {
+                    @include fontStyles($fontHeadings, bold, 40px); 
+                }
+
+                span {
+                    @include displayStyles(inline-block);
+                    @include paddingStyles(20px); 
+                    border-radius: 50%;
+                    @include fontStyles($fontHeadings, normal, 70px);
+                    @include colorStyles($colorMain, white); 
+                }
+
+                p {
+                    @include marginStyles(10px); 
+                    @include paddingStyles(5px); 
+                    @include fontStyles($fontParagraphs, normal, 30px); 
+                    @include textStyles(inherit, inherit, none, none);
+                    @include colorStyles(none, $colorMain); 
+                }
+
+            }
+
+            div.container_inner:nth-child(2) {
+                border-left: 1px solid $colorMain;
+            }  
+
+            div.flex {
+                @include flexContainerStyles(row, wrap, center, center);
+            }
+    }
+       
+}
+
+/* Carousel  */
+
+section#display_3 {
+
+    @include paddingStyles(100px 0);
+    // background-color: $colorMain;
+
+        div {
+            @include flexContainerStyles(row, wrap, center, stretch);
         }
 
         div.card {      
@@ -173,7 +237,7 @@ section#display_3 {
                     @include marginStyles(5px auto);
                     @include fontStyles($fontHeadings, bold, 20px);
                     @include textStyles(0.5px, 30px, none, none);
-                    @include colorStyles(none, $colorMain);
+                    @include colorStyles(none, $colorFinal);
                 }
 
                 p {
@@ -185,7 +249,7 @@ section#display_3 {
 
 }
 
-/* Threat Report Section  */
+/* Threat Report */
 
 section#report {
 
@@ -200,7 +264,7 @@ section#report {
         div.container_text {
 
             @include flexContainerStyles(column, wrap, center, center);
-            @include paddingStyles(150px 0 80px 0);
+            @include paddingStyles(150px 0 130px 0);
           
                 h2 {
                     @include marginStyles(10px auto);
@@ -238,68 +302,37 @@ section#report {
                
 }
 
-/* Display Cards (2)  */
+/* Trusted By */
 
-section#display_2 {
-
-    @include paddingStyles(50px 0 100px 0);
+section#trusted {
+    padding: 80px 0 20px 0;
 
         h2 {
-            @include marginStyles(40px auto); 
+            @include marginStyles(10px auto); 
             @include fontStyles($fontHeadings, bold, 40px); 
-            @include textStyles(0.5px, inherit, none, none);
+            @include textStyles(inherit, inherit, none, none);
             @include colorStyles(none, $colorMain); 
         }
 
-        div {
-            @include flexContainerStyles(row, wrap, center, stretch);
-            overflow: visible;
+        p {
+            @include marginStyles(20px auto);
+            @include fontStyles($fontParagraphs, normal, 16px);
+            @include textStyles(1px, 25px, none, none);
+            @include colorStyles(none, $colorOnWhite);
         }
 
-        div.card {      
-            @include marginStyles(20px);
-            // @include positionStyles(relative);
-            // top: 50px;
-            @include widthStyles(45%); 
-            @include borderStyles(none, 0, none);
-            @include colorStyles(none, inherit); 
-            // @include boxShadowStyles($boxShadowLight);
+        ul {
+            @include flexContainerStyles(row, wrap, space-evenly, stretch); 
+            @include marginStyles(20px auto); 
+            @include paddingStyles(5px); 
 
-            // &:nth-child(2) {      
-            //     top: 150px;
-            // }
-
-                // img {
-                //     border-radius: 4px;
-                //     @include widthStyles(100%);
-                // }
-
-                h3 {
-                    @include marginStyles(10px auto);
-                    @include fontStyles($fontHeadings, bold, 22px);
-                    @include textStyles(0.5px, 40px, none, none);
-                    @include colorStyles(none, $colorMain);
-                }
-
-                hr {
-                    @include hrStyles(20px auto, 90%, 1px solid $colorMain);
-                }
-
-                p {
-                    @include marginStyles(15px auto);
-                    @include paddingStyles(0 5px);
-                    @include fontStyles($fontParagraphs, normal, 16px);
-                    @include textStyles(1px, 25px, none, none);
+                li {
+                    @include marginStyles(10px); 
+                    @include paddingStyles(5px);
+                    @include widthStyles(15%);  
                 }
         }
-
-        a {
-            @include colorStyles($colorMain, $colorSecond);
-        }
-
 }
-
-
 
 /* Other Banner */
 
@@ -309,7 +342,7 @@ section#other-banner {
         height: 700px;
 }
 
-/* Footer Section */
+/* Footer */
 
 footer {
     @include paddingStyles(50px 0 5px 0);

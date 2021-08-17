@@ -42,9 +42,8 @@ img {
 
 .banner-headline {
     @include marginStyles(150px 0 20px 150px);
-    @include fontStyles($fontHeadings, auto, 55px);
+    @include fontStyles($fontHeadings, normal, 55px);
     @include textStyles(0.5px, 55px, auto, none);
-    @include colorStyles(none, $colorMain);
 }
 
 .banner-text {

@@ -53,14 +53,12 @@ img {
 .banner-headline {
   margin: 150px 0 20px 150px;
   font-family: "Gilroy Light", sans-serif;
-  font-weight: auto;
+  font-weight: normal;
   font-size: 55px;
   letter-spacing: 0.5px;
   line-height: 55px;
   text-transform: auto;
   text-decoration: none;
-  background-color: none;
-  color: midnightblue;
 }
 
 .banner-text {
@@ -195,34 +193,72 @@ nav#navigation div#nav-links-container a#cta {
 section#page-banner {
   margin: 60px 0 0 0;
   padding: 50px 10px 150px 10px;
-  background-image: url(../images/mathew.jpg);
+  background-image: url(../images/stream.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: scroll;
 }
+section#page-banner div h1, section#page-banner div p {
+  background-color: none;
+  color: #fff;
+}
 section#page-banner div p {
   width: 50%;
 }
 
-/* Trusted By */
-section#trusted {
-  padding: 40px;
+/* Display Cards (2)  */
+section#display_2 {
+  padding: 50px 0 100px 0;
 }
-section#trusted h2 {
-  margin: 10px auto;
+section#display_2 h2 {
+  margin: 40px 0 70px 0;
   font-family: "Gilroy Light", sans-serif;
   font-weight: bold;
   font-size: 40px;
-  letter-spacing: inherit;
+  letter-spacing: 0.5px;
   line-height: inherit;
   text-transform: none;
   text-decoration: none;
   background-color: none;
   color: midnightblue;
 }
-section#trusted p {
+section#display_2 div {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+section#display_2 div.card {
+  margin: 20px;
+  width: 45%;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background-color: none;
+  color: none;
+}
+section#display_2 div.card h3 {
+  margin: 10px auto;
+  font-family: "Gilroy Light", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  line-height: 40px;
+  text-transform: none;
+  text-decoration: none;
+  background-color: none;
+  color: #887e7e;
+}
+section#display_2 div.card hr {
   margin: 20px auto;
+  width: 90%;
+  border: 1px solid midnightblue;
+  border-bottom: none;
+}
+section#display_2 div.card p {
+  margin: 15px auto;
+  padding: 0 5px;
   font-family: "Source Sans Pro Regular", sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -230,24 +266,78 @@ section#trusted p {
   line-height: 25px;
   text-transform: none;
   text-decoration: none;
-  background-color: none;
-  color: #4a4540;
 }
-section#trusted ul {
+section#display_2 a {
+  background-color: midnightblue;
+  color: #fff;
+}
+
+/* Stats*/
+section#stats div.container_outer {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: stretch;
+  align-items: center;
+}
+section#stats div.container_outer div.container_inner.flex {
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+section#stats div.container_outer div.container_inner {
+  padding: 10px;
+  width: 45%;
+}
+section#stats div.container_outer div.container_inner h2, section#stats div.container_outer div.container_inner span {
   margin: 20px auto;
   padding: 5px;
+  letter-spacing: 0.5px;
+  line-height: inherit;
+  text-transform: none;
+  text-decoration: none;
+  background-color: none;
+  color: midnightblue;
 }
-section#trusted ul li {
+section#stats div.container_outer div.container_inner h2 {
+  font-family: "Gilroy Light", sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+}
+section#stats div.container_outer div.container_inner span {
+  display: inline-block;
+  padding: 20px;
+  border-radius: 50%;
+  font-family: "Gilroy Light", sans-serif;
+  font-weight: normal;
+  font-size: 70px;
+  background-color: midnightblue;
+  color: white;
+}
+section#stats div.container_outer div.container_inner p {
   margin: 10px;
   padding: 5px;
-  width: 15%;
+  font-family: "Source Sans Pro Regular", sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  letter-spacing: inherit;
+  line-height: inherit;
+  text-transform: none;
+  text-decoration: none;
+  background-color: none;
+  color: midnightblue;
+}
+section#stats div.container_outer div.container_inner:nth-child(2) {
+  border-left: 1px solid midnightblue;
+}
+section#stats div.container_outer div.flex {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Display Cards (3)  */
+/* Carousel  */
 section#display_3 {
   padding: 100px 0;
 }
@@ -256,15 +346,6 @@ section#display_3 div {
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  padding: 20px 0;
-=======
-  overflow: visible;
->>>>>>> parent of 4c0c8d1... Section#display-cards-3 was merged into section#trusted and the text in each div.card was altered to fit the message of the overall section
-=======
-  overflow: visible;
->>>>>>> parent of 4c0c8d1... Section#display-cards-3 was merged into section#trusted and the text in each div.card was altered to fit the message of the overall section
 }
 section#display_3 div.card {
   margin: 20px;
@@ -287,7 +368,7 @@ section#display_3 div.card h3 {
   text-transform: none;
   text-decoration: none;
   background-color: none;
-  color: midnightblue;
+  color: #887e7e;
 }
 section#display_3 div.card p {
   margin: 5px 15px;
@@ -300,7 +381,7 @@ section#display_3 div.card p {
   text-decoration: none;
 }
 
-/* Threat Report Section  */
+/* Threat Report */
 section#report {
   flex-direction: row;
   flex-wrap: wrap;
@@ -317,7 +398,7 @@ section#report div.container_text {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 150px 0 80px 0;
+  padding: 150px 0 130px 0;
 }
 section#report div.container_text h2 {
   margin: 10px auto;
@@ -358,59 +439,24 @@ section#report div.container_img img {
   height: 100%;
 }
 
-/* Display Cards (2)  */
-section#display_2 {
-  padding: 50px 0 100px 0;
+/* Trusted By */
+section#trusted {
+  padding: 80px 0 20px 0;
 }
-section#display_2 h2 {
-  margin: 40px auto;
+section#trusted h2 {
+  margin: 10px auto;
   font-family: "Gilroy Light", sans-serif;
   font-weight: bold;
   font-size: 40px;
-  letter-spacing: 0.5px;
+  letter-spacing: inherit;
   line-height: inherit;
   text-transform: none;
   text-decoration: none;
   background-color: none;
   color: midnightblue;
 }
-section#display_2 div {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  overflow: visible;
-}
-section#display_2 div.card {
-  margin: 20px;
-  width: 45%;
-  border: none;
-  border-radius: 0;
-  outline: none;
-  background-color: none;
-  color: inherit;
-}
-section#display_2 div.card h3 {
-  margin: 10px auto;
-  font-family: "Gilroy Light", sans-serif;
-  font-weight: bold;
-  font-size: 22px;
-  letter-spacing: 0.5px;
-  line-height: 40px;
-  text-transform: none;
-  text-decoration: none;
-  background-color: none;
-  color: midnightblue;
-}
-section#display_2 div.card hr {
+section#trusted p {
   margin: 20px auto;
-  width: 90%;
-  border: 1px solid midnightblue;
-  border-bottom: none;
-}
-section#display_2 div.card p {
-  margin: 15px auto;
-  padding: 0 5px;
   font-family: "Source Sans Pro Regular", sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -418,10 +464,21 @@ section#display_2 div.card p {
   line-height: 25px;
   text-transform: none;
   text-decoration: none;
+  background-color: none;
+  color: #4a4540;
 }
-section#display_2 a {
-  background-color: midnightblue;
-  color: #fff;
+section#trusted ul {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  margin: 20px auto;
+  padding: 5px;
+}
+section#trusted ul li {
+  margin: 10px;
+  padding: 5px;
+  width: 15%;
 }
 
 /* Other Banner */
@@ -435,7 +492,7 @@ section#other-banner {
   height: 700px;
 }
 
-/* Footer Section */
+/* Footer */
 footer {
   padding: 50px 0 5px 0;
   background-color: #fff;
