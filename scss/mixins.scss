@@ -117,7 +117,8 @@
 
 // BACKGROUND IMAGES
 
-@mixin bgImageStyles($repeat, $pos, $size, $atch) {
+@mixin bgImageStyles($bg, $repeat, $pos, $size, $atch) {
+    background-image: $bg;
     background-repeat: $repeat;
     background-position: $pos;
     background-size: $size;

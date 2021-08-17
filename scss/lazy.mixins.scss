@@ -19,7 +19,7 @@
 @include fontStyles($family, $weight, $size); 
 @include textStyles($spacing, $height, $transform, $decor);
 @include colorStyles($bgcolor, $color); 
-@include bgImageStyles($repeat, $pos, $size, $atch);
+@include bgImageStyles($bg, $repeat, $pos, $size, $atch);
 @include hrStyles($margin, $width, $border); 
 @include boxShadowStyles($shade); 
 @include transitionStyles($trans);

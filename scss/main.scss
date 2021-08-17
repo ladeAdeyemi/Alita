@@ -46,6 +46,9 @@ nav#navigation {
                 }
           
                 a#cta {
+                    @include borderStyles(none, 0, none);
+                    @include fontStyles($fontNavLinks, bold, 13px);
+                    @include textStyles(1.5px, auto, uppercase, none);
                     margin-left: 100px;
                     font-weight: bold;
                     @include colorStyles($colorMain, white);
@@ -60,10 +63,10 @@ nav#navigation {
 section#page-banner {
 
 // See also generalstyles module
-
-    // @include gridContainerStyles($cols, $rows);
+    @include marginStyles(60px 0 0 0);
     @include paddingStyles(50px 10px 150px 10px);
-    // @include bgImageStyles($repeat, $pos, $size, $atch);
+    // @include gridContainerStyles($cols, $rows);
+    @include bgImageStyles(url(../images/mathew.jpg), no-repeat, center, cover, scroll);
 
     div {
 
@@ -77,11 +80,48 @@ section#page-banner {
 
 }
 
+/* Trusted By */
+
+section#trusted {
+    padding: 40px;
+    // background-color: black;
+
+        h2 {
+            @include marginStyles(10px auto); 
+            @include fontStyles($fontHeadings, bold, 40px); 
+            @include textStyles(inherit, inherit, none, none);
+            @include colorStyles(none, $colorMain); 
+        }
+
+        p {
+            @include marginStyles(20px auto);
+            @include fontStyles($fontParagraphs, normal, 16px);
+            @include textStyles(1px, 25px, none, none);
+            @include colorStyles(none, $colorOnWhite);
+        }
+
+        ul {
+            @include flexContainerStyles(row, wrap, space-evenly, stretch); 
+            @include marginStyles(20px auto); 
+            @include paddingStyles(5px); 
+
+            li {
+                    @include marginStyles(10px); 
+                    @include paddingStyles(5px);
+                    @include widthStyles(15%);  
+                
+                    // img {
+
+                    // }
+            }
+        }
+}
+
 /* Display Cards (3)  */
 
 section#display_3 {
 
-    @include paddingStyles(0 0 50px 0);
+    @include paddingStyles(100px 0);
     // background-color: $colorMain;
 
         div {
@@ -97,7 +137,7 @@ section#display_3 {
             @include widthStyles($c4); 
             @include borderStyles(none, 0, none);
             @include colorStyles(none, inherit); 
-            // @include boxShadowStyles($boxShadowLight);
+            @include boxShadowStyles($boxShadowDark);
 
             // &:nth-child(2) {      
             //     bottom: 120px;
@@ -124,12 +164,12 @@ section#display_3 {
 
 }
 
-/* Duo  */
+/* Threat Report Section  */
 
-section#duo {
+section#report {
 
     @include flexContainerStyles(row, wrap, space-evenly, stretch);
-    background-color: $colorMain;
+    background-color: red;
 
         div.container_text, div.container_img {
             @include marginStyles(0);
@@ -139,7 +179,7 @@ section#duo {
         div.container_text {
 
             @include flexContainerStyles(column, wrap, center, center);
-            @include paddingStyles(150px 0);
+            @include paddingStyles(150px 0 80px 0);
           
                 h2 {
                     @include marginStyles(10px auto);
@@ -161,11 +201,6 @@ section#duo {
                 }
 
                 a {
-                    @include marginStyles(10px auto);
-                    @include paddingStyles(10px); 
-                    @include borderStyles(1px solid $colorSecond, 0, none);
-                    @include fontStyles($fontSubheadings, bold, 16px);
-                    @include textStyles(0.5px, 25px, uppercase, none);
                     @include colorStyles(none, $colorSecond);
                 }
 
@@ -237,17 +272,20 @@ section#display_2 {
                 }
         }
 
+        a {
+            @include colorStyles($colorMain, $colorSecond);
+        }
+
 }
+
+
 
 /* Other Banner */
 
 section#other-banner {
-
-        background-image: url(../images/ship.jpg);
-        @include bgImageStyles(no-repeat, center, cover, scroll);
+        @include bgImageStyles(url(../images/rain.jpg), no-repeat, center, cover, scroll);
         width: 100%;
         height: 700px;
-
 }
 
 /* Footer Section */
@@ -274,7 +312,7 @@ footer {
                         h4 {
                             @include displayStyles(block);
                             @include marginStyles(20px 0);
-                            @include fontStyles($fontNavLinks, normal, 16px);
+                            @include fontStyles($fontHeadings, bold, 16px);
                             @include textStyles(1px, inherit, uppercase, none);
                             @include colorStyles(none, $colorMain);
                         }
@@ -285,20 +323,25 @@ footer {
                             @include paddingStyles(0);
                             @include fontStyles($fontParagraphs, normal, 14px);
                             @include textStyles(0.5px, inherit, none, none);
-                            @include colorStyles(none, $colorMain);
+                            @include colorStyles(none, $colorOnWhite);
                             @include transitionStyles(0.3s ease-in-out);
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
             
                                 sup {
                                     font-size: 8px;
+
+                                    &:hover {
+                                        text-decoration: none;
+                                    }
                                 }
             
                                 span {
                                     color: orangered; 
                                 }
             
-                                &:hover {
-                                    text-decoration: underline;
-                                }
                         }
         
                  }
@@ -332,8 +375,9 @@ footer {
 
         p#copyright {
             @include marginStyles(2px 0 0 0); 
-            @include fontStyles($fontParagraphs, normal, 12px); 
-            @include colorStyles(none, $colorMain); 
+            @include fontStyles($fontParagraphs, normal, 12px);
+            @include textStyles(0.5px, inherit, none, none);
+            @include colorStyles(none, $colorOnWhite); 
             text-align: right;
             align-self: center;
             // The align self property is used when the paragraph...

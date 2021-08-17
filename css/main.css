@@ -10,8 +10,8 @@
   font-display: block;
 }
 @font-face {
-  src: url(../fonts/SARABUN-REGULAR.ttf) format("truetype");
-  font-family: "Sarabun";
+  src: url(../fonts/SourceSansPro-Regular.ttf) format("truetype");
+  font-family: "Source Sans Pro Regular";
   font-display: block;
 }
 /* Universal selector, body tag */
@@ -19,7 +19,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Sarabun", sans-serif;
+  font-family: "Source Sans Pro Regular", sans-serif;
   text-decoration: none;
 }
 
@@ -65,12 +65,27 @@ img {
 
 .banner-text {
   margin: 5px 5px 5px 150px;
-  font-family: "Sarabun", sans-serif;
+  font-family: "Source Sans Pro Regular", sans-serif;
   font-weight: normal;
   font-size: 19px;
   letter-spacing: 1px;
   line-height: 30px;
   text-transform: none;
+  text-decoration: none;
+}
+
+.cta {
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 0;
+  outline: none;
+  font-family: "Gilroy Light", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 25px;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -88,6 +103,11 @@ img {
 
 .hidden {
   visibility: none;
+}
+
+.list-item {
+  display: inline-block;
+  text-decoration: none;
 }
 
 .on-black {
@@ -139,7 +159,7 @@ nav#navigation div#nav-links-container a {
   border: none;
   border-radius: 4px;
   outline: none;
-  font-family: "Gilroy", sans-serif;
+  font-family: "Gilroy Light", sans-serif;
   font-weight: bold;
   font-size: 14.5px;
   letter-spacing: 1px;
@@ -155,6 +175,16 @@ nav#navigation div#nav-links-container a:hover {
   color: midnightblue;
 }
 nav#navigation div#nav-links-container a#cta {
+  border: none;
+  border-radius: 0;
+  outline: none;
+  font-family: "Gilroy Light", sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  line-height: auto;
+  text-transform: uppercase;
+  text-decoration: none;
   margin-left: 100px;
   font-weight: bold;
   background-color: midnightblue;
@@ -163,15 +193,63 @@ nav#navigation div#nav-links-container a#cta {
 
 /* Page Banner Section */
 section#page-banner {
+  margin: 60px 0 0 0;
   padding: 50px 10px 150px 10px;
+  background-image: url(../images/mathew.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
 }
 section#page-banner div p {
   width: 50%;
 }
 
+/* Trusted By */
+section#trusted {
+  padding: 40px;
+}
+section#trusted h2 {
+  margin: 10px auto;
+  font-family: "Gilroy Light", sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: inherit;
+  line-height: inherit;
+  text-transform: none;
+  text-decoration: none;
+  background-color: none;
+  color: midnightblue;
+}
+section#trusted p {
+  margin: 20px auto;
+  font-family: "Source Sans Pro Regular", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 25px;
+  text-transform: none;
+  text-decoration: none;
+  background-color: none;
+  color: #4a4540;
+}
+section#trusted ul {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  margin: 20px auto;
+  padding: 5px;
+}
+section#trusted ul li {
+  margin: 10px;
+  padding: 5px;
+  width: 15%;
+}
+
 /* Display Cards (3)  */
 section#display_3 {
-  padding: 0 0 50px 0;
+  padding: 100px 0;
 }
 section#display_3 div {
   flex-direction: row;
@@ -189,6 +267,7 @@ section#display_3 div.card {
   outline: none;
   background-color: none;
   color: inherit;
+  box-shadow: 2px 2px 10px rgba(211, 207, 207, 0.7);
 }
 section#display_3 div.card h3 {
   margin: 5px auto;
@@ -204,7 +283,7 @@ section#display_3 div.card h3 {
 }
 section#display_3 div.card p {
   margin: 5px 15px;
-  font-family: "Sarabun", sans-serif;
+  font-family: "Source Sans Pro Regular", sans-serif;
   font-weight: normal;
   font-size: 16px;
   letter-spacing: 1px;
@@ -213,26 +292,26 @@ section#display_3 div.card p {
   text-decoration: none;
 }
 
-/* Duo  */
-section#duo {
+/* Threat Report Section  */
+section#report {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: stretch;
-  background-color: midnightblue;
+  background-color: red;
 }
-section#duo div.container_text, section#duo div.container_img {
+section#report div.container_text, section#report div.container_img {
   margin: 0;
   width: 50%;
 }
-section#duo div.container_text {
+section#report div.container_text {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 150px 0;
+  padding: 150px 0 80px 0;
 }
-section#duo div.container_text h2 {
+section#report div.container_text h2 {
   margin: 10px auto;
   font-family: "Gilroy Light", sans-serif;
   font-weight: normal;
@@ -244,16 +323,16 @@ section#duo div.container_text h2 {
   background-color: none;
   color: #fff;
 }
-section#duo div.container_text hr {
+section#report div.container_text hr {
   margin: 20px auto;
   width: 90%;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: none;
 }
-section#duo div.container_text p {
+section#report div.container_text p {
   margin: 25px auto;
   padding: 0 30px;
-  font-family: "Sarabun", sans-serif;
+  font-family: "Source Sans Pro Regular", sans-serif;
   font-weight: normal;
   font-size: 16px;
   letter-spacing: 1px;
@@ -263,23 +342,11 @@ section#duo div.container_text p {
   background-color: none;
   color: #fff;
 }
-section#duo div.container_text a {
-  margin: 10px auto;
-  padding: 10px;
-  border: 1px solid #fff;
-  border-radius: 0;
-  outline: none;
-  font-family: "Gilroy Light", sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  line-height: 25px;
-  text-transform: uppercase;
-  text-decoration: none;
+section#report div.container_text a {
   background-color: none;
   color: #fff;
 }
-section#duo div.container_img img {
+section#report div.container_img img {
   height: 100%;
 }
 
@@ -336,7 +403,7 @@ section#display_2 div.card hr {
 section#display_2 div.card p {
   margin: 15px auto;
   padding: 0 5px;
-  font-family: "Sarabun", sans-serif;
+  font-family: "Source Sans Pro Regular", sans-serif;
   font-weight: normal;
   font-size: 16px;
   letter-spacing: 1px;
@@ -344,10 +411,14 @@ section#display_2 div.card p {
   text-transform: none;
   text-decoration: none;
 }
+section#display_2 a {
+  background-color: midnightblue;
+  color: #fff;
+}
 
 /* Other Banner */
 section#other-banner {
-  background-image: url(../images/ship.jpg);
+  background-image: url(../images/rain.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -382,8 +453,8 @@ footer nav#footer-nav div.column:nth-child(4) {
 footer nav#footer-nav div.column h4 {
   display: block;
   margin: 20px 0;
-  font-family: "Gilroy", sans-serif;
-  font-weight: normal;
+  font-family: "Gilroy Light", sans-serif;
+  font-weight: bold;
   font-size: 16px;
   letter-spacing: 1px;
   line-height: inherit;
@@ -396,7 +467,7 @@ footer nav#footer-nav div.column a {
   display: block;
   margin: 15px 0;
   padding: 0;
-  font-family: "Sarabun", sans-serif;
+  font-family: "Source Sans Pro Regular", sans-serif;
   font-weight: normal;
   font-size: 14px;
   letter-spacing: 0.5px;
@@ -404,17 +475,20 @@ footer nav#footer-nav div.column a {
   text-transform: none;
   text-decoration: none;
   background-color: none;
-  color: midnightblue;
+  color: #4a4540;
   transition: 0.3s ease-in-out;
+}
+footer nav#footer-nav div.column a:hover {
+  text-decoration: underline;
 }
 footer nav#footer-nav div.column a sup {
   font-size: 8px;
 }
+footer nav#footer-nav div.column a sup:hover {
+  text-decoration: none;
+}
 footer nav#footer-nav div.column a span {
   color: orangered;
-}
-footer nav#footer-nav div.column a:hover {
-  text-decoration: underline;
 }
 footer hr {
   margin: 20px auto;
@@ -444,11 +518,15 @@ footer div#footer-logo-container img {
 }
 footer p#copyright {
   margin: 2px 0 0 0;
-  font-family: "Sarabun", sans-serif;
+  font-family: "Source Sans Pro Regular", sans-serif;
   font-weight: normal;
   font-size: 12px;
+  letter-spacing: 0.5px;
+  line-height: inherit;
+  text-transform: none;
+  text-decoration: none;
   background-color: none;
-  color: midnightblue;
+  color: #4a4540;
   text-align: right;
   align-self: center;
 }

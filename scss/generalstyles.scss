@@ -54,6 +54,14 @@ img {
     @include textStyles(1px, 30px, none, none);
 }
 
+.cta {
+    @include marginStyles(10px auto);
+    @include paddingStyles(10px); 
+    @include borderStyles(1px solid $colorSecond, 0, none);
+    @include fontStyles($fontSubheadings, bold, 16px);
+    @include textStyles(0.5px, 25px, uppercase, none);
+}
+
 .collapsed {
     height: 0;
 }
@@ -71,6 +79,11 @@ img {
 
 .hidden {
     visibility: none;
+}
+
+.list-item {
+    display: inline-block;
+    text-decoration: none;
 }
 
 .on-black {
