@@ -2,6 +2,8 @@
 
 // Contains mixins that hold the most frequently used CSS properties. Use the lazy.mixins.scss file to write less code by copying and pasting pre-written @include directives & their parameters into your scss rules.
 
+// Pass in 'null' as an argument for any parameters you don't need in the mixin; 
+
 // If you're finding it hard to figure out why your HTML elements aren't being styled the way you want don't forget to check the other modules.
 
 // UNIVERSAL SELECTOR                           

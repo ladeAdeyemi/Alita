@@ -2,6 +2,7 @@
                           
 // Copy & paste the below group into all your scss/css rules to save time typing out @include directives and their individual parameters;
 // Delete un-needed mixins from scss rules as necessary;
+// Pass in 'null' as an argument for any parameters you don't need in the mixin; 
 // Reduce the amount of code written to just css values by passing them into the mixin parameters as arguments;
 // Maintain consistent logical top to bottom flow of scss / css rules (margin, then padding, then positioning etc);
 

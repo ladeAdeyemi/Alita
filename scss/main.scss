@@ -12,10 +12,9 @@ nav#navigation {
     @include flexContainerStyles(row, wrap, space-around, stretch);
     @include paddingStyles(5px);
     @include positionStyles(fixed);
-    @include borderStyles(1px solid lightgrey, none, none);
+    @include borderStyles(1px solid lightgrey, null, null);
     @include widthStyles(100%);
     @include colorStyles(#fff, inherit);
-    // @include boxShadowStyles($boxShadowLight);
 
         div#nav-logo-container {
             @include displayStyles(inline-block);
@@ -34,21 +33,21 @@ nav#navigation {
                     @include displayStyles(inline-block);
                     @include marginStyles(10px 5px);
                     @include paddingStyles(10px);
-                    @include borderStyles(none, 4px, none);
+                    @include borderStyles(null, 4px, null);
                     @include fontStyles($fontNavLinks, bold, 14.5px);
-                    @include textStyles(1px, auto, none, none);
+                    @include textStyles(1px, auto, null, null);
                     @include transitionStyles(0.3s ease);
-                    @include colorStyles(none, $colorMain);
+                    @include colorStyles(null, $colorMain);
 
                         &:hover {
-                            @include colorStyles(#eee, $colorMain);
+                            opacity: 70%;
                         }
                 }
           
                 a#cta {
-                    @include borderStyles(none, 0, none);
+                    @include borderStyles(null, 0, null);
                     @include fontStyles($fontNavLinks, bold, 13px);
-                    @include textStyles(1.5px, auto, uppercase, none);
+                    @include textStyles(1.5px, auto, uppercase, null);
                     margin-left: 100px;
                     font-weight: bold;
                     @include colorStyles($colorMain, white);
@@ -62,7 +61,6 @@ nav#navigation {
 
 section#page-banner {
 
-// See also generalstyles module
     @include marginStyles(60px 0 0 0);
     @include paddingStyles(50px 10px 150px 10px);
     // @include gridContainerStyles($cols, $rows);
@@ -73,28 +71,35 @@ section#page-banner {
         // @include gridItemStyles($col, $row);
 
             h1, p {
-                @include colorStyles(none, $colorSecond);
+                @include colorStyles(null, $colorSecond);
+                text-shadow: rgba(255, 255, 255, 0.5);
             }
 
             p {
                 width: 50%;
+                text-shadow: rgba(255, 255, 255, 0.5);
             }
 
     }
 
 }
 
-/* Display Cards (2)  */
+/* Solutions  */
 
-section#display_2 {
+section#solutions {
 
     @include paddingStyles(50px 0 100px 0);
 
         h2 {
-            @include marginStyles(40px 0 70px 0); 
+            @include marginStyles(40px 0 20px 0); 
             @include fontStyles($fontHeadings, normal, 40px); 
-            @include textStyles(0.5px, inherit, none, none);
-            @include colorStyles(none, $colorMain); 
+            @include textStyles(0.5px, inherit, null, null);
+            @include colorStyles(null, $colorMain); 
+        }
+
+        p {
+            @include marginStyles(20px auto);
+            @include widthStyles(70%);
         }
 
         div {
@@ -103,39 +108,16 @@ section#display_2 {
 
         div.card {      
             @include marginStyles(20px);
-            // @include positionStyles(relative);
-            // top: 50px;
             @include widthStyles(35%); 
-            @include borderStyles(none, 0, none);
-            @include colorStyles(none, none); 
-            // @include boxShadowStyles($boxShadowLight);
-
-            // &:nth-child(2) {      
-            //     top: 150px;
-            // }
-
-                // img {
-                //     border-radius: 4px;
-                //     @include widthStyles(100%);
-                // }
+            @include borderStyles(null, 0, null);
+            @include colorStyles(null, null); 
 
                 h3 {
                     @include marginStyles(10px auto);
-                    @include fontStyles($fontHeadings, normal, 22px);
-                    @include textStyles(0.5px, 30px, none, none);
-                    @include colorStyles(none, $colorOnWhite);
+                    @include fontStyles($fontHeadings, normal, 20px);
+                    @include textStyles(0.5px, 30px, null, null);
+                    @include colorStyles(null, $colorOnWhite);
                 }
-
-                hr {
-                    @include hrStyles(20px auto, 90%, 1px solid $colorMain);
-                }
-
-                // p {
-                //     @include marginStyles(15px auto);
-                //     @include paddingStyles(0 5px);
-                //     @include fontStyles($fontParagraphs, normal, 16px);
-                //     @include textStyles(1px, 20px, none, none);
-                // }
         }
 
         a {
@@ -151,16 +133,14 @@ section#display_2 {
 
 section#stats {
 
-    // padding: 100px 0;
     // background-color: #eee;
 
     div.container_outer {
 
-        @include flexContainerStyles(row, wrap, space-evenly, center); 
-
-            div.container_inner.flex {
-                @include flexContainerStyles(column, wrap, center, center); 
-            }
+        @include flexContainerStyles(row, wrap, center, center);
+        border-top: 1px solid lightgrey; 
+        border-bottom: 1px solid lightgrey;
+        box-shadow: $boxShadowSpread;
 
             div.container_inner {
                 @include paddingStyles(10px); 
@@ -169,41 +149,47 @@ section#stats {
                 h2, span {
                     @include marginStyles(20px auto); 
                     @include paddingStyles(5px); 
-                    @include textStyles(0.5px, inherit, none, none);
-                    @include colorStyles(none, $colorMain); 
+                    @include textStyles(0.5px, inherit, null, null);
                 }
 
                 h2 {
                     @include fontStyles($fontHeadings, normal, 40px); 
+                    @include colorStyles(null, $colorMain); 
                 }
 
                 span {
                     @include displayStyles(inline-block);
                     @include paddingStyles(20px); 
-                    border: 2px solid $colorMain;
+                    border: 4px solid $colorMain;
                     border-radius: 50%;
-                    @include fontStyles($fontHeadings, normal, 60px);
+                    @include fontStyles($fontHeadings, bold, 60px);
                     @include colorStyles($colorSecond, $colorMain);
-                    // @include boxShadowStyles(1px 1px 12px 2px lightgrey);
+                    // @include boxShadowStyles(1px 1px 12px 2px grey);
                 }
 
                 p {
                     @include marginStyles(40px); 
-                    @include paddingStyles(5px); 
-                    @include fontStyles($fontParagraphs, normal, 28px); 
-                    @include textStyles(inherit, inherit, none, none);
-                    @include colorStyles(none, $colorOnWhite); 
+                    @include paddingStyles(5px);
+                    min-width: 350px;
+                    @include fontStyles(null, null, 28px); 
+                    letter-spacing: -0.5px;
+                    @include colorStyles(null, $colorFinal); 
                 }
 
             }
 
-            div.container_inner:nth-child(2) {
-                border-left: 1px solid $colorMain;
-            }  
+            // div.container_inner:nth-child(2) {
+            //     border-left: 1px solid $colorMain;
+            // }  
 
-            div.flex {
-                @include flexContainerStyles(row, wrap, center, center);
+            div.container_inner.flex {
+                @include flexContainerStyles(column, wrap, center, center); 
+
+                    div.flex {
+                        @include flexContainerStyles(row, wrap, space-between, center);
+                    }
             }
+
     }
        
 }
@@ -213,7 +199,6 @@ section#stats {
 section#display_3 {
 
     @include paddingStyles(100px 0);
-    // background-color: $colorMain;
 
         div {
             @include flexContainerStyles(row, wrap, center, stretch);
@@ -221,35 +206,18 @@ section#display_3 {
 
         div.card {      
             @include marginStyles(20px);
-            // @include paddingStyles(5px); 
-            // @include positionStyles(relative);
-            bottom: 170px;
             @include widthStyles($c4); 
-            @include borderStyles(none, 0, none);
-            @include colorStyles(none, inherit); 
+            @include borderStyles(null, 0, null);
+            @include colorStyles($colorSecond, null); 
             @include boxShadowStyles($boxShadowDark);
-
-            // &:nth-child(2) {      
-            //     bottom: 120px;
-            // }
-
-                // img {
-                //     border-radius: 4px;
-             
-                // }
 
                 h3 {
                     @include marginStyles(5px auto);
                     @include fontStyles($fontHeadings, normal, 20px);
-                    @include textStyles(0.5px, 30px, none, none);
-                    @include colorStyles(none, $colorOnWhite);
+                    @include textStyles(0.5px, 30px, null, null);
+                    @include colorStyles(null, $colorOnWhite);
                 }
 
-                p {
-                    @include marginStyles(5px 15px);
-                    @include fontStyles($fontParagraphs, normal, 16px);
-                    @include textStyles(1px, 25px, none, none);
-                }
         }
 
 }
@@ -260,6 +228,7 @@ section#report {
 
     @include flexContainerStyles(row, wrap, space-evenly, stretch);
     background-color: red;
+    overflow: visible;
 
         div.container_text, div.container_img {
             @include marginStyles(0);
@@ -274,8 +243,8 @@ section#report {
                 h2 {
                     @include marginStyles(10px auto);
                     @include fontStyles($fontHeadings, normal, 40px);
-                    @include textStyles(0.2px, 40px, none, none);
-                    @include colorStyles(none, $colorSecond);
+                    @include textStyles(0.2px, 40px, null, null);
+                    @include colorStyles(null, $colorSecond);
                 }
 
                 hr {
@@ -285,13 +254,11 @@ section#report {
                 p {
                     @include marginStyles(25px auto);
                     @include paddingStyles(0 30px);
-                    @include fontStyles($fontParagraphs, normal, 18px);
-                    @include textStyles(1px, 25px, none, none);
-                    @include colorStyles(none, $colorSecond);
+                    @include colorStyles(null, $colorSecond);
                 }
 
                 a {
-                    @include colorStyles(none, $colorSecond);
+                    @include colorStyles(null, $colorSecond);
                 }
 
         }
@@ -299,7 +266,6 @@ section#report {
         div.container_img {
 
             img {
-                // @include widthStyles(100%);
                 @include heightStyles(100%);
             }
 
@@ -315,15 +281,12 @@ section#trusted {
         h2 {
             @include marginStyles(10px auto); 
             @include fontStyles($fontHeadings, normal, 40px); 
-            @include textStyles(inherit, inherit, none, none);
-            @include colorStyles(none, $colorMain); 
+            @include textStyles(inherit, inherit, null, null);
+            @include colorStyles(null, $colorMain); 
         }
 
         p {
             @include marginStyles(20px auto);
-            @include fontStyles($fontParagraphs, normal, 18px);
-            @include textStyles(1px, 25px, none, none);
-            @include colorStyles(none, $colorOnWhite);
         }
 
         ul {
@@ -357,29 +320,24 @@ section#try {
             h3 {
                 @include marginStyles(10px auto); 
                 @include fontStyles($fontHeadings, normal, 40px); 
-                @include textStyles(inherit, inherit, none, none);
-                @include colorStyles(none, $colorMain);   
+                @include textStyles(inherit, inherit, null, null);
+                @include colorStyles(null, $colorMain);   
             }
 
             p {
                 @include marginStyles(20px auto);
-                @include fontStyles($fontParagraphs, normal, 18px);
-                @include textStyles(1px, 25px, none, none);
-                @include colorStyles(none, $colorOnWhite);  
+                margin-top: 5px;
             }
 
             form {
-                display: block;
+                @include flexContainerStyles(row, wrap, center, center); 
                 margin: 10px auto;
 
                     input {
-                        // display: inline-block;
-                        margin: 0 auto;
-                        margin-left: 300px;
                         padding: 12px;
                         border: 1px solid $colorFinal;
                         border-radius: 0;
-                        width: 50%;
+                        width: 60%;
                         font-size: 18px;
                         outline: none;
 
@@ -390,16 +348,15 @@ section#try {
 
                     button {
                         margin-left: 5px;
-                        padding: 14px;
+                        padding: 16.5px;
                         border: none;
                         font-family: $fontHeadings;
-                        font-size: 18px;
+                        font-size: 14px;
                         letter-spacing: 1px;
                         text-transform: uppercase;
                         @include colorStyles($colorMain, $colorSecond);  
                     }
             }
-
 
         }
 }
@@ -494,10 +451,7 @@ footer {
             @include fontStyles($fontParagraphs, normal, 12px);
             @include textStyles(0.5px, inherit, none, none);
             @include colorStyles(none, $colorOnWhite); 
-            text-align: right;
             align-self: center;
-            // The align self property is used when the paragraph...
-            // is added to the social flex container.
         }
 
 }
