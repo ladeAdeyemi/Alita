@@ -159,9 +159,10 @@ nav#navigation div#nav-links-container a {
   border-radius: 4px;
   font-family: "Gilroy Light", sans-serif;
   font-weight: bold;
-  font-size: 14.5px;
+  font-size: 13px;
   letter-spacing: 1px;
   line-height: auto;
+  text-transform: uppercase;
   transition: 0.3s ease;
   color: midnightblue;
 }

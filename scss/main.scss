@@ -34,8 +34,8 @@ nav#navigation {
                     @include marginStyles(10px 5px);
                     @include paddingStyles(10px);
                     @include borderStyles(null, 4px, null);
-                    @include fontStyles($fontNavLinks, bold, 14.5px);
-                    @include textStyles(1px, auto, null, null);
+                    @include fontStyles($fontNavLinks, bold, 13px);
+                    @include textStyles(1px, auto, uppercase, null);
                     @include transitionStyles(0.3s ease);
                     @include colorStyles(null, $colorMain);
 
