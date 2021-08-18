@@ -92,7 +92,7 @@ section#display_2 {
 
         h2 {
             @include marginStyles(40px 0 70px 0); 
-            @include fontStyles($fontHeadings, bold, 40px); 
+            @include fontStyles($fontHeadings, normal, 40px); 
             @include textStyles(0.5px, inherit, none, none);
             @include colorStyles(none, $colorMain); 
         }
@@ -105,7 +105,7 @@ section#display_2 {
             @include marginStyles(20px);
             // @include positionStyles(relative);
             // top: 50px;
-            @include widthStyles(45%); 
+            @include widthStyles(35%); 
             @include borderStyles(none, 0, none);
             @include colorStyles(none, none); 
             // @include boxShadowStyles($boxShadowLight);
@@ -121,24 +121,27 @@ section#display_2 {
 
                 h3 {
                     @include marginStyles(10px auto);
-                    @include fontStyles($fontHeadings, bold, 22px);
-                    @include textStyles(0.5px, 40px, none, none);
-                    @include colorStyles(none, $colorFinal);
+                    @include fontStyles($fontHeadings, normal, 22px);
+                    @include textStyles(0.5px, 30px, none, none);
+                    @include colorStyles(none, $colorOnWhite);
                 }
 
                 hr {
                     @include hrStyles(20px auto, 90%, 1px solid $colorMain);
                 }
 
-                p {
-                    @include marginStyles(15px auto);
-                    @include paddingStyles(0 5px);
-                    @include fontStyles($fontParagraphs, normal, 16px);
-                    @include textStyles(1px, 25px, none, none);
-                }
+                // p {
+                //     @include marginStyles(15px auto);
+                //     @include paddingStyles(0 5px);
+                //     @include fontStyles($fontParagraphs, normal, 16px);
+                //     @include textStyles(1px, 20px, none, none);
+                // }
         }
 
         a {
+            @include displayStyles(inline-block);
+            @include marginStyles(10px auto);
+            font-weight: normal;
             @include colorStyles($colorMain, $colorSecond);
         }
 
@@ -171,23 +174,25 @@ section#stats {
                 }
 
                 h2 {
-                    @include fontStyles($fontHeadings, bold, 40px); 
+                    @include fontStyles($fontHeadings, normal, 40px); 
                 }
 
                 span {
                     @include displayStyles(inline-block);
                     @include paddingStyles(20px); 
+                    border: 2px solid $colorMain;
                     border-radius: 50%;
-                    @include fontStyles($fontHeadings, normal, 70px);
-                    @include colorStyles($colorMain, white); 
+                    @include fontStyles($fontHeadings, normal, 60px);
+                    @include colorStyles($colorSecond, $colorMain);
+                    // @include boxShadowStyles(1px 1px 12px 2px lightgrey);
                 }
 
                 p {
-                    @include marginStyles(10px); 
+                    @include marginStyles(40px); 
                     @include paddingStyles(5px); 
-                    @include fontStyles($fontParagraphs, normal, 30px); 
+                    @include fontStyles($fontParagraphs, normal, 28px); 
                     @include textStyles(inherit, inherit, none, none);
-                    @include colorStyles(none, $colorMain); 
+                    @include colorStyles(none, $colorOnWhite); 
                 }
 
             }
@@ -235,9 +240,9 @@ section#display_3 {
 
                 h3 {
                     @include marginStyles(5px auto);
-                    @include fontStyles($fontHeadings, bold, 20px);
+                    @include fontStyles($fontHeadings, normal, 20px);
                     @include textStyles(0.5px, 30px, none, none);
-                    @include colorStyles(none, $colorFinal);
+                    @include colorStyles(none, $colorOnWhite);
                 }
 
                 p {
@@ -280,7 +285,7 @@ section#report {
                 p {
                     @include marginStyles(25px auto);
                     @include paddingStyles(0 30px);
-                    @include fontStyles($fontParagraphs, normal, 16px);
+                    @include fontStyles($fontParagraphs, normal, 18px);
                     @include textStyles(1px, 25px, none, none);
                     @include colorStyles(none, $colorSecond);
                 }
@@ -309,14 +314,14 @@ section#trusted {
 
         h2 {
             @include marginStyles(10px auto); 
-            @include fontStyles($fontHeadings, bold, 40px); 
+            @include fontStyles($fontHeadings, normal, 40px); 
             @include textStyles(inherit, inherit, none, none);
             @include colorStyles(none, $colorMain); 
         }
 
         p {
             @include marginStyles(20px auto);
-            @include fontStyles($fontParagraphs, normal, 16px);
+            @include fontStyles($fontParagraphs, normal, 18px);
             @include textStyles(1px, 25px, none, none);
             @include colorStyles(none, $colorOnWhite);
         }
@@ -340,6 +345,63 @@ section#other-banner {
         @include bgImageStyles(url(../images/rain.jpg), no-repeat, center, cover, scroll);
         width: 100%;
         height: 700px;
+}
+
+/* TRY ALITA */
+
+section#try {
+    padding: 40px;
+
+        div#sign-up-container {
+
+            h3 {
+                @include marginStyles(10px auto); 
+                @include fontStyles($fontHeadings, normal, 40px); 
+                @include textStyles(inherit, inherit, none, none);
+                @include colorStyles(none, $colorMain);   
+            }
+
+            p {
+                @include marginStyles(20px auto);
+                @include fontStyles($fontParagraphs, normal, 18px);
+                @include textStyles(1px, 25px, none, none);
+                @include colorStyles(none, $colorOnWhite);  
+            }
+
+            form {
+                display: block;
+                margin: 10px auto;
+
+                    input {
+                        // display: inline-block;
+                        margin: 0 auto;
+                        margin-left: 300px;
+                        padding: 12px;
+                        border: 1px solid $colorFinal;
+                        border-radius: 0;
+                        width: 50%;
+                        font-size: 18px;
+                        outline: none;
+
+                        &:focus {
+                            border: 1px solid $colorMain;
+                        }
+                    }
+
+                    button {
+                        margin-left: 5px;
+                        padding: 14px;
+                        border: none;
+                        font-family: $fontHeadings;
+                        font-size: 18px;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        @include colorStyles($colorMain, $colorSecond);  
+                    }
+            }
+
+
+        }
 }
 
 /* Footer */

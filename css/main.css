@@ -25,7 +25,7 @@
 
 body {
   background-color: white;
-  color: #4a4540;
+  color: #363b3b;
 }
 
 img {
@@ -65,7 +65,7 @@ img {
   margin: 5px 5px 5px 150px;
   font-family: "Source Sans Pro Regular", sans-serif;
   font-weight: normal;
-  font-size: 19px;
+  font-size: 20px;
   letter-spacing: 1px;
   line-height: 30px;
   text-transform: none;
@@ -115,7 +115,7 @@ img {
 
 .on-white {
   background-color: none;
-  color: #4a4540;
+  color: #363b3b;
 }
 
 .rule {
@@ -214,7 +214,7 @@ section#display_2 {
 section#display_2 h2 {
   margin: 40px 0 70px 0;
   font-family: "Gilroy Light", sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 40px;
   letter-spacing: 0.5px;
   line-height: inherit;
@@ -231,7 +231,7 @@ section#display_2 div {
 }
 section#display_2 div.card {
   margin: 20px;
-  width: 45%;
+  width: 35%;
   border: none;
   border-radius: 0;
   outline: none;
@@ -241,14 +241,14 @@ section#display_2 div.card {
 section#display_2 div.card h3 {
   margin: 10px auto;
   font-family: "Gilroy Light", sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 22px;
   letter-spacing: 0.5px;
-  line-height: 40px;
+  line-height: 30px;
   text-transform: none;
   text-decoration: none;
   background-color: none;
-  color: #887e7e;
+  color: #363b3b;
 }
 section#display_2 div.card hr {
   margin: 20px auto;
@@ -256,18 +256,10 @@ section#display_2 div.card hr {
   border: 1px solid midnightblue;
   border-bottom: none;
 }
-section#display_2 div.card p {
-  margin: 15px auto;
-  padding: 0 5px;
-  font-family: "Source Sans Pro Regular", sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  letter-spacing: 1px;
-  line-height: 25px;
-  text-transform: none;
-  text-decoration: none;
-}
 section#display_2 a {
+  display: inline-block;
+  margin: 10px auto;
+  font-weight: normal;
   background-color: midnightblue;
   color: #fff;
 }
@@ -301,31 +293,32 @@ section#stats div.container_outer div.container_inner h2, section#stats div.cont
 }
 section#stats div.container_outer div.container_inner h2 {
   font-family: "Gilroy Light", sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 40px;
 }
 section#stats div.container_outer div.container_inner span {
   display: inline-block;
   padding: 20px;
+  border: 2px solid midnightblue;
   border-radius: 50%;
   font-family: "Gilroy Light", sans-serif;
   font-weight: normal;
-  font-size: 70px;
-  background-color: midnightblue;
-  color: white;
+  font-size: 60px;
+  background-color: #fff;
+  color: midnightblue;
 }
 section#stats div.container_outer div.container_inner p {
-  margin: 10px;
+  margin: 40px;
   padding: 5px;
   font-family: "Source Sans Pro Regular", sans-serif;
   font-weight: normal;
-  font-size: 30px;
+  font-size: 28px;
   letter-spacing: inherit;
   line-height: inherit;
   text-transform: none;
   text-decoration: none;
   background-color: none;
-  color: midnightblue;
+  color: #363b3b;
 }
 section#stats div.container_outer div.container_inner:nth-child(2) {
   border-left: 1px solid midnightblue;
@@ -337,7 +330,7 @@ section#stats div.container_outer div.flex {
   align-items: center;
 }
 
-/* Carousel  */
+/* Carousel or Conveyor Belt  */
 section#display_3 {
   padding: 100px 0;
 }
@@ -361,14 +354,14 @@ section#display_3 div.card {
 section#display_3 div.card h3 {
   margin: 5px auto;
   font-family: "Gilroy Light", sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 20px;
   letter-spacing: 0.5px;
   line-height: 30px;
   text-transform: none;
   text-decoration: none;
   background-color: none;
-  color: #887e7e;
+  color: #363b3b;
 }
 section#display_3 div.card p {
   margin: 5px 15px;
@@ -423,7 +416,7 @@ section#report div.container_text p {
   padding: 0 30px;
   font-family: "Source Sans Pro Regular", sans-serif;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 1px;
   line-height: 25px;
   text-transform: none;
@@ -446,7 +439,7 @@ section#trusted {
 section#trusted h2 {
   margin: 10px auto;
   font-family: "Gilroy Light", sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 40px;
   letter-spacing: inherit;
   line-height: inherit;
@@ -459,13 +452,13 @@ section#trusted p {
   margin: 20px auto;
   font-family: "Source Sans Pro Regular", sans-serif;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 1px;
   line-height: 25px;
   text-transform: none;
   text-decoration: none;
   background-color: none;
-  color: #4a4540;
+  color: #363b3b;
 }
 section#trusted ul {
   flex-direction: row;
@@ -490,6 +483,63 @@ section#other-banner {
   background-attachment: scroll;
   width: 100%;
   height: 700px;
+}
+
+/* TRY ALITA */
+section#try {
+  padding: 40px;
+}
+section#try div#sign-up-container h3 {
+  margin: 10px auto;
+  font-family: "Gilroy Light", sans-serif;
+  font-weight: normal;
+  font-size: 40px;
+  letter-spacing: inherit;
+  line-height: inherit;
+  text-transform: none;
+  text-decoration: none;
+  background-color: none;
+  color: midnightblue;
+}
+section#try div#sign-up-container p {
+  margin: 20px auto;
+  font-family: "Source Sans Pro Regular", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 25px;
+  text-transform: none;
+  text-decoration: none;
+  background-color: none;
+  color: #363b3b;
+}
+section#try div#sign-up-container form {
+  display: block;
+  margin: 10px auto;
+}
+section#try div#sign-up-container form input {
+  margin: 0 auto;
+  margin-left: 300px;
+  padding: 12px;
+  border: 1px solid #887e7e;
+  border-radius: 0;
+  width: 50%;
+  font-size: 18px;
+  outline: none;
+}
+section#try div#sign-up-container form input:focus {
+  border: 1px solid midnightblue;
+}
+section#try div#sign-up-container form button {
+  margin-left: 5px;
+  padding: 14px;
+  border: none;
+  font-family: "Gilroy Light", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: midnightblue;
+  color: #fff;
 }
 
 /* Footer */
@@ -540,7 +590,7 @@ footer nav#footer-nav div.column a {
   text-transform: none;
   text-decoration: none;
   background-color: none;
-  color: #4a4540;
+  color: #363b3b;
   transition: 0.3s ease-in-out;
 }
 footer nav#footer-nav div.column a:hover {
@@ -591,7 +641,7 @@ footer p#copyright {
   text-transform: none;
   text-decoration: none;
   background-color: none;
-  color: #4a4540;
+  color: #363b3b;
   text-align: right;
   align-self: center;
 }

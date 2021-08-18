@@ -49,7 +49,7 @@ img {
 .banner-text {
     @include marginStyles(5px 5px 5px 150px);
     // @include paddingStyles(10px);
-    @include fontStyles($fontParagraphs, normal, 19px);
+    @include fontStyles($fontParagraphs, normal, 20px);
     @include textStyles(1px, 30px, none, none);
 }
 
