@@ -1,10 +1,5 @@
 /* FONTS */
 @font-face {
-  src: url(../fonts/gilroy-extrabold.otf) format("opentype");
-  font-family: "Gilroy";
-  font-display: block;
-}
-@font-face {
   src: url(../fonts/gilroy-light.otf) format("opentype");
   font-family: "Gilroy Light";
   font-display: block;
@@ -43,6 +38,10 @@ p {
   color: #363b3b;
 }
 
+small {
+  display: block;
+}
+
 /* General Use Classes */
 .align-c {
   text-align: center;
@@ -65,7 +64,7 @@ p {
   font-family: "Gilroy Light", sans-serif;
   font-weight: normal;
   font-size: 55px;
-  letter-spacing: 0.5px;
+  letter-spacing: -0.5px;
   line-height: 55px;
   text-transform: auto;
 }
@@ -82,9 +81,6 @@ p {
 .cta {
   margin: 10px auto;
   padding: 10px;
-  border: 1px solid #fff;
-  border-radius: 0;
-  outline: none;
   font-family: "Gilroy Light", sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -148,7 +144,7 @@ nav#navigation div#nav-logo-container {
 }
 nav#navigation div#nav-logo-container img {
   position: relative;
-  top: 4px;
+  top: 5px;
 }
 nav#navigation div#nav-links-container {
   display: inline-block;
@@ -166,8 +162,11 @@ nav#navigation div#nav-links-container a {
   text-transform: uppercase;
   color: midnightblue;
 }
+nav#navigation div#nav-links-container a sup {
+  color: red;
+}
 nav#navigation div#nav-links-container a:hover {
-  opacity: 70%;
+  color: red;
 }
 nav#navigation div#nav-links-container a#cta {
   border-radius: 0;
@@ -191,19 +190,18 @@ nav#navigation div#nav-links-container a#cta:hover {
 section#page-banner {
   margin: 60px 0 0 0;
   padding: 50px 10px 150px 10px;
-  background-image: url(../images/stream.jpg);
+  background-image: url(../images/mathew.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: scroll;
 }
-section#page-banner div h1, section#page-banner div p {
-  color: #fff;
-  text-shadow: rgba(255, 255, 255, 0.5);
+section#page-banner div h1 {
+  color: midnightblue;
 }
 section#page-banner div p {
   width: 50%;
-  text-shadow: rgba(255, 255, 255, 0.5);
+  color: #363b3b;
 }
 
 /* Solutions  */
@@ -214,8 +212,8 @@ section#solutions h2 {
   margin: 40px 0 20px 0;
   font-family: "Gilroy Light", sans-serif;
   font-weight: normal;
-  font-size: 40px;
-  letter-spacing: 0.5px;
+  font-size: 43px;
+  letter-spacing: -0.5px;
   line-height: inherit;
   color: midnightblue;
 }
@@ -238,8 +236,8 @@ section#solutions div.card h3 {
   margin: 10px auto;
   font-family: "Gilroy Light", sans-serif;
   font-weight: normal;
-  font-size: 20px;
-  letter-spacing: 0.5px;
+  font-size: 18px;
+  letter-spacing: 0.2px;
   line-height: 30px;
   color: #363b3b;
 }
@@ -250,16 +248,20 @@ section#solutions a {
   background-color: midnightblue;
   color: #fff;
 }
+section#solutions a:hover {
+  background-color: red;
+}
 
 /* Stats*/
 section#stats div.container_outer {
+  padding: 40px 0;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   border-top: 1px solid lightgrey;
   border-bottom: 1px solid lightgrey;
-  box-shadow: 2px 2px 10px rgba(211, 207, 207, 0.7);
+  box-shadow: 2px 2px 12px 2px rgba(183, 183, 183, 0.9);
 }
 section#stats div.container_outer div.container_inner {
   padding: 10px;
@@ -268,7 +270,7 @@ section#stats div.container_outer div.container_inner {
 section#stats div.container_outer div.container_inner h2, section#stats div.container_outer div.container_inner span {
   margin: 20px auto;
   padding: 5px;
-  letter-spacing: 0.5px;
+  letter-spacing: -0.5px;
   line-height: inherit;
 }
 section#stats div.container_outer div.container_inner h2 {
@@ -296,6 +298,9 @@ section#stats div.container_outer div.container_inner p {
   letter-spacing: -0.5px;
   color: #969696;
 }
+section#stats div.container_outer div.container_inner small {
+  margin: 10px;
+}
 section#stats div.container_outer div.container_inner.flex {
   flex-direction: column;
   flex-wrap: wrap;
@@ -312,7 +317,6 @@ section#stats div.container_outer div.container_inner.flex div.flex {
 /* Carousel  */
 section#carousel {
   padding: 100px 0;
-  background-color: #eee;
 }
 section#carousel div {
   flex-direction: row;
@@ -352,7 +356,7 @@ section#carousel div.card h3 {
   font-family: "Gilroy Light", sans-serif;
   font-weight: normal;
   font-size: 20px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.2px;
   line-height: 30px;
   color: #363b3b;
 }
@@ -364,7 +368,6 @@ section#report {
   justify-content: space-evenly;
   align-items: stretch;
   background-color: red;
-  overflow: visible;
 }
 section#report div.container_text, section#report div.container_img {
   margin: 0;
@@ -382,7 +385,7 @@ section#report div.container_text h2 {
   font-family: "Gilroy Light", sans-serif;
   font-weight: normal;
   font-size: 40px;
-  letter-spacing: 0.2px;
+  letter-spacing: -0.5px;
   line-height: 40px;
   color: #fff;
 }
@@ -398,6 +401,9 @@ section#report div.container_text p {
   color: #fff;
 }
 section#report div.container_text a {
+  border: 1px solid #fff;
+  border-radius: 0;
+  outline: none;
   color: #fff;
 }
 section#report div.container_text a:hover {
@@ -410,27 +416,28 @@ section#report div.container_img img {
 
 /* Trusted By */
 section#trusted {
-  padding: 80px 0 20px 0;
+  padding: 40px 0 0 0;
 }
 section#trusted h2 {
   margin: 10px auto;
   font-family: "Gilroy Light", sans-serif;
   font-weight: normal;
   font-size: 40px;
-  letter-spacing: inherit;
+  letter-spacing: -0.5px;
   line-height: inherit;
   color: midnightblue;
 }
 section#trusted p {
-  margin: 20px auto;
+  margin: 10px auto;
+  margin-bottom: 30px;
 }
 section#trusted ul {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: stretch;
-  margin: 20px auto;
-  padding: 5px;
+  margin: 0 auto;
+  padding: 0;
 }
 section#trusted ul li {
   margin: 10px;
@@ -458,7 +465,7 @@ section#try div#sign-up-container h3 {
   font-family: "Gilroy Light", sans-serif;
   font-weight: normal;
   font-size: 40px;
-  letter-spacing: inherit;
+  letter-spacing: -0.5px;
   line-height: inherit;
   color: midnightblue;
 }
@@ -498,7 +505,7 @@ section#try div#sign-up-container form button {
 
 /* Footer */
 footer {
-  padding: 50px 0 5px 0;
+  padding: 50px 0 80px 0;
   background-color: #fff;
   color: midnightblue;
 }

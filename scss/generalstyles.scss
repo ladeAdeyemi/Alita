@@ -2,8 +2,6 @@
 
 // These classes are meant to be shared across all your projects. If you're finding it hard to figure out why your HTML elements aren't being styled the way you want don't forget to check the other modules.
 
-// Import Statements
-
 @import "variables";
 @import "mixins";
 
@@ -28,6 +26,10 @@ p {
     @include colorStyles(null, $colorOnWhite);
 }
 
+small {
+    @include displayStyles(block);
+}
+
 /* General Use Classes */
 
 .align-c {
@@ -49,7 +51,7 @@ p {
 .banner-headline {
     @include marginStyles(150px 0 20px 150px);
     @include fontStyles($fontHeadings, normal, 55px);
-    @include textStyles(0.5px, 55px, auto, null);
+    @include textStyles($headlines, 55px, auto, null);
 }
 
 .banner-text {
@@ -62,7 +64,6 @@ p {
 .cta {
     @include marginStyles(10px auto);
     @include paddingStyles(10px); 
-    @include borderStyles(1px solid $colorSecond, 0, none);
     @include fontStyles($fontSubheadings, bold, 16px);
     @include textStyles(0.5px, 25px, uppercase, none);
 }

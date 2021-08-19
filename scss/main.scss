@@ -22,7 +22,7 @@ nav#navigation {
 
         div#nav-logo-container img {
             @include positionStyles(relative);
-            top: 4px;
+            top: 5px;
         }
 
         div#nav-links-container {
@@ -38,8 +38,12 @@ nav#navigation {
                     @include textStyles(1px, auto, uppercase, null);
                     @include colorStyles(null, $colorMain);
 
+                        sup {
+                            @include colorStyles(null, $colorThird);
+                        }
+
                         &:hover {
-                            opacity: 70%;
+                            color: $colorThird;
                         }
                 }
           
@@ -67,20 +71,19 @@ section#page-banner {
     @include marginStyles(60px 0 0 0);
     @include paddingStyles(50px 10px 150px 10px);
     // @include gridContainerStyles($cols, $rows);
-    @include bgImageStyles(url(../images/stream.jpg), no-repeat, center, cover, scroll);
+    @include bgImageStyles(url(../images/mathew.jpg), no-repeat, center, cover, scroll);
 
     div {
 
         // @include gridItemStyles($col, $row);
 
-            h1, p {
-                @include colorStyles(null, $colorSecond);
-                text-shadow: rgba(255, 255, 255, 0.5);
+            h1 {
+                @include colorStyles(null, $colorMain);
             }
 
             p {
                 width: 50%;
-                text-shadow: rgba(255, 255, 255, 0.5);
+                @include colorStyles(null, $colorOnWhite);
             }
 
     }
@@ -95,8 +98,8 @@ section#solutions {
 
         h2 {
             @include marginStyles(40px 0 20px 0); 
-            @include fontStyles($fontHeadings, normal, 40px); 
-            @include textStyles(0.5px, inherit, null, null);
+            @include fontStyles($fontHeadings, normal, 43px); 
+            @include textStyles($headlines, inherit, null, null);
             @include colorStyles(null, $colorMain); 
         }
 
@@ -117,8 +120,8 @@ section#solutions {
 
                 h3 {
                     @include marginStyles(10px auto);
-                    @include fontStyles($fontHeadings, normal, 20px);
-                    @include textStyles(0.5px, 30px, null, null);
+                    @include fontStyles($fontHeadings, normal, 18px);
+                    @include textStyles(0.2px, 30px, null, null);
                     @include colorStyles(null, $colorOnWhite);
                 }
         }
@@ -128,6 +131,10 @@ section#solutions {
             @include marginStyles(10px auto);
             font-weight: normal;
             @include colorStyles($colorMain, $colorSecond);
+
+                &:hover {
+                    @include colorStyles($colorThird, null);
+                }
         }
 
 }
@@ -138,10 +145,11 @@ section#stats {
 
     div.container_outer {
 
+        @include paddingStyles(40px 0);
         @include flexContainerStyles(row, wrap, center, center);
         border-top: 1px solid lightgrey; 
         border-bottom: 1px solid lightgrey;
-        box-shadow: $boxShadowDark;
+        box-shadow: $solutions;
 
             div.container_inner {
                 @include paddingStyles(10px); 
@@ -150,13 +158,17 @@ section#stats {
                 h2, span {
                     @include marginStyles(20px auto); 
                     @include paddingStyles(5px); 
-                    @include textStyles(0.5px, inherit, null, null);
+                    @include textStyles($headlines, inherit, null, null);
                 }
 
                 h2 {
                     @include fontStyles($fontHeadings, normal, 40px); 
                     @include colorStyles(null, $colorMain); 
                 }
+
+                // img {
+                //     height: 30px;
+                // }
 
                 span {
                     @include displayStyles(inline-block);
@@ -175,6 +187,10 @@ section#stats {
                     @include fontStyles(null, null, 28px); 
                     letter-spacing: -0.5px;
                     @include colorStyles(null, #969696); 
+                }
+
+                small {
+                    @include marginStyles(10px); 
                 }
 
             }
@@ -196,7 +212,6 @@ section#stats {
 section#carousel {
 
     @include paddingStyles(100px 0);
-    @include colorStyles(#eee, null);
 
         div {
             @include flexContainerStyles(row, wrap, center, stretch);
@@ -236,7 +251,7 @@ section#carousel {
                 h3 {
                     @include marginStyles(5px auto);
                     @include fontStyles($fontHeadings, normal, 20px);
-                    @include textStyles(0.5px, 30px, null, null);
+                    @include textStyles(0.2px, 30px, null, null);
                     @include colorStyles(null, $colorOnWhite);
                 }
 
@@ -249,8 +264,7 @@ section#carousel {
 section#report {
 
     @include flexContainerStyles(row, wrap, space-evenly, stretch);
-    background-color: red;
-    overflow: visible;
+    background-color: $colorThird;
 
         div.container_text, div.container_img {
             @include marginStyles(0);
@@ -265,7 +279,7 @@ section#report {
                 h2 {
                     @include marginStyles(10px auto);
                     @include fontStyles($fontHeadings, normal, 40px);
-                    @include textStyles(0.2px, 40px, null, null);
+                    @include textStyles($headlines, 40px, null, null);
                     @include colorStyles(null, $colorSecond);
                 }
 
@@ -280,6 +294,7 @@ section#report {
                 }
 
                 a {
+                    @include borderStyles(1px solid $colorSecond, 0, none);
                     @include colorStyles(null, $colorSecond);
                
                         &:hover {
@@ -302,23 +317,31 @@ section#report {
 /* Trusted By */
 
 section#trusted {
-    padding: 80px 0 20px 0;
+
+    padding: 40px 0 0 0;
 
         h2 {
             @include marginStyles(10px auto); 
             @include fontStyles($fontHeadings, normal, 40px); 
-            @include textStyles(inherit, inherit, null, null);
+            @include textStyles($headlines, inherit, null, null);
             @include colorStyles(null, $colorMain); 
         }
 
         p {
-            @include marginStyles(20px auto);
+            @include marginStyles(10px auto);
+            margin-bottom: 30px;
         }
+
+        // hr {
+        //     margin: 35px auto;
+        //     margin-bottom: 0;
+        //     width: 90%;
+        // }
 
         ul {
             @include flexContainerStyles(row, wrap, space-evenly, stretch); 
-            @include marginStyles(20px auto); 
-            @include paddingStyles(5px); 
+            @include marginStyles(0 auto); 
+            @include paddingStyles(0); 
 
                 li {
                     @include marginStyles(10px); 
@@ -346,7 +369,7 @@ section#try {
             h3 {
                 @include marginStyles(10px auto); 
                 @include fontStyles($fontHeadings, normal, 40px); 
-                @include textStyles(inherit, inherit, null, null);
+                @include textStyles($headlines, inherit, null, null);
                 @include colorStyles(null, $colorMain);   
             }
 
@@ -390,7 +413,7 @@ section#try {
 /* Footer */
 
 footer {
-    @include paddingStyles(50px 0 5px 0);
+    @include paddingStyles(50px 0 80px 0);
     @include colorStyles($colorSecond, $colorMain);
 
         nav#footer-nav {
