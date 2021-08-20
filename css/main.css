@@ -9,6 +9,11 @@
   font-family: "Source Sans Pro Regular";
   font-display: block;
 }
+@font-face {
+  src: url(../fonts/SourceSansPro-ExtraLight.ttf) format("truetype");
+  font-family: "Source Sans Pro Light";
+  font-display: block;
+}
 /* Universal selector, body tag */
 * {
   margin: 0;
@@ -129,7 +134,7 @@ nav#navigation {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: stretch;
-  padding: 5px;
+  padding: 10px 0;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -138,6 +143,7 @@ nav#navigation {
   width: 100%;
   background-color: #fff;
   color: inherit;
+  transition: 0.3s ease-in-out;
 }
 nav#navigation div#nav-logo-container {
   display: inline-block;
@@ -279,6 +285,9 @@ section#stats div.container_outer div.container_inner h2 {
   font-size: 40px;
   color: midnightblue;
 }
+section#stats div.container_outer div.container_inner img {
+  padding: 0 60px;
+}
 section#stats div.container_outer div.container_inner span {
   display: inline-block;
   padding: 20px;
@@ -294,9 +303,10 @@ section#stats div.container_outer div.container_inner p {
   margin: 40px;
   padding: 5px;
   min-width: 350px;
-  font-size: 28px;
+  font-family: "Source Sans Pro Light";
+  font-size: 30px;
   letter-spacing: -0.5px;
-  color: #969696;
+  color: #2f2b2b;
 }
 section#stats div.container_outer div.container_inner small {
   margin: 10px;
@@ -331,6 +341,7 @@ section#carousel div.carousel-btn-l, section#carousel div.carousel-btn-r {
   width: 70px;
   height: 70px;
   border-radius: 50%;
+  transition: 0.5s ease-in-out;
 }
 section#carousel div.carousel-btn-l:hover, section#carousel div.carousel-btn-r:hover {
   background-color: #fff;
@@ -416,7 +427,8 @@ section#report div.container_img img {
 
 /* Trusted By */
 section#trusted {
-  padding: 40px 0 0 0;
+  padding: 40px;
+  padding-bottom: 20px;
 }
 section#trusted h2 {
   margin: 10px auto;
@@ -428,8 +440,8 @@ section#trusted h2 {
   color: midnightblue;
 }
 section#trusted p {
-  margin: 10px auto;
-  margin-bottom: 30px;
+  margin: 20px auto;
+  margin-bottom: 10px;
 }
 section#trusted ul {
   flex-direction: row;
@@ -440,8 +452,8 @@ section#trusted ul {
   padding: 0;
 }
 section#trusted ul li {
-  margin: 10px;
-  padding: 5px;
+  margin: 5px;
+  padding: 0 20px;
   width: 15%;
 }
 
@@ -456,7 +468,7 @@ section#other-banner {
   height: 700px;
 }
 
-/* TRY ALITA */
+/* Try Alita */
 section#try {
   padding: 40px;
 }
@@ -607,6 +619,28 @@ footer p#copyright {
 }
 
 /***** MEDIA QUERIES *****/
+@media screen and (max-width: 1125px) {
+  section#trusted ul {
+    justify-content: center;
+    margin-top: 40px;
+  }
+  section#trusted ul li {
+    margin: 5px 0;
+    padding: 0 40px;
+    width: 25%;
+  }
+
+  section#try div#sign-up-container form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+  }
+  section#try div#sign-up-container form input {
+    width: 80%;
+  }
+}
 @media screen and (max-width: 877px) {
   footer {
     padding-bottom: 50px;
@@ -629,8 +663,41 @@ footer p#copyright {
   footer div#social div#social-media-container, footer div#social div#footer-logo-container img, footer div#social p#copyright {
     margin: 5px auto;
   }
+  footer div#social div#social-media-container {
+    order: 1;
+    margin-bottom: 30px;
+  }
   footer div#social p#copyright {
     text-align: center;
-    order: 5;
+    order: 2;
+  }
+}
+@media screen and (max-width: 789px) {
+  section#try div#sign-up-container form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+  }
+  section#try div#sign-up-container form input {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 589px) {
+  section#try div#sign-up-container form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+  }
+  section#try div#sign-up-container form input {
+    margin-bottom: 20px;
+    width: 97%;
+  }
+  section#try div#sign-up-container form button {
+    margin-left: 0;
+    width: 97%;
   }
 }

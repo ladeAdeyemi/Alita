@@ -10,11 +10,12 @@
 nav#navigation {
 
     @include flexContainerStyles(row, wrap, space-around, stretch);
-    @include paddingStyles(5px);
+    @include paddingStyles(10px 0);
     @include positionStyles(fixed);
     @include borderStyles(1px solid lightgrey, null, null);
     @include widthStyles(100%);
     @include colorStyles(#fff, inherit);
+    @include transitionStyles(0.3s ease-in-out);
 
         div#nav-logo-container {
             @include displayStyles(inline-block);
@@ -166,9 +167,9 @@ section#stats {
                     @include colorStyles(null, $colorMain); 
                 }
 
-                // img {
-                //     height: 30px;
-                // }
+                img {
+                    padding: 0 60px;
+                }
 
                 span {
                     @include displayStyles(inline-block);
@@ -184,9 +185,9 @@ section#stats {
                     @include marginStyles(40px); 
                     @include paddingStyles(5px);
                     min-width: 350px;
-                    @include fontStyles(null, null, 28px); 
+                    @include fontStyles('Source Sans Pro Light', null, 30px); 
                     letter-spacing: -0.5px;
-                    @include colorStyles(null, #969696); 
+                    @include colorStyles(null, #2f2b2b); 
                 }
 
                 small {
@@ -224,6 +225,7 @@ section#carousel {
             width: 70px;
             height: 70px;
             border-radius: 50%;
+            transition: 0.5s ease-in-out;
 
                 &:hover {
                     @include colorStyles($colorSecond, null);
@@ -318,7 +320,8 @@ section#report {
 
 section#trusted {
 
-    padding: 40px 0 0 0;
+    padding: 40px;
+    padding-bottom: 20px;
 
         h2 {
             @include marginStyles(10px auto); 
@@ -328,8 +331,8 @@ section#trusted {
         }
 
         p {
-            @include marginStyles(10px auto);
-            margin-bottom: 30px;
+            @include marginStyles(20px auto);
+            margin-bottom: 10px;
         }
 
         // hr {
@@ -344,8 +347,8 @@ section#trusted {
             @include paddingStyles(0); 
 
                 li {
-                    @include marginStyles(10px); 
-                    @include paddingStyles(5px);
+                    @include marginStyles(5px); 
+                    @include paddingStyles(0 20px);
                     @include widthStyles(15%);  
                 }
         }
@@ -359,7 +362,7 @@ section#other-banner {
         height: 700px;
 }
 
-/* TRY ALITA */
+/* Try Alita */
 
 section#try {
     padding: 40px;
@@ -507,6 +510,47 @@ footer {
 
 /***** MEDIA QUERIES *****/
 
+@media screen and (max-width: 1125px) {
+
+    section#trusted {
+
+            ul {
+
+                justify-content: center;
+                margin-top: 40px;
+    
+                    li {
+                        margin: 5px 0;
+                        padding: 0 40px;
+                        @include widthStyles(25%);  
+                    }
+            }
+    }
+
+
+    section#try {
+    
+        div#sign-up-container {
+
+            form {
+                @include flexContainerStyles(row, wrap, center, center); 
+                margin: 10px auto;
+
+                    input {
+                        width: 80%;
+                    }
+
+            }
+
+        }
+}
+
+
+
+}
+
+
+
 @media screen and (max-width: 877px) {
 
     footer {
@@ -528,10 +572,61 @@ footer {
                 @include marginStyles(5px auto);
             }
 
+            div#social-media-container {
+                order: 1;
+                margin-bottom: 30px;
+            }
+
             p#copyright {
                 text-align: center;
-                order: 5;
+                order: 2;
             }
     }
 
+}
+
+@media screen and (max-width: 789px) {
+
+    section#try {
+    
+            div#sign-up-container {
+    
+                form {
+                    @include flexContainerStyles(row, wrap, center, center); 
+                    margin: 10px auto;
+    
+                        input {
+                            width: 80%;
+                        }
+    
+                }
+    
+            }
+    }
+}
+
+@media screen and (max-width: 589px) {
+
+    section#try {
+    
+            div#sign-up-container {
+    
+                form {
+                    @include flexContainerStyles(row, wrap, center, center); 
+                    margin: 10px auto;
+    
+                        input {
+                            margin-bottom: 20px;
+                            width: 97%;
+                        }
+
+                        button {
+                            margin-left: 0;
+                            width: 97%;
+                        }
+    
+                }
+    
+            }
+    }
 }
