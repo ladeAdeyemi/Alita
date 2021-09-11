@@ -24,6 +24,14 @@
   transition: 0.3s ease;
 }
 
+*::before {
+  box-sizing: border-box;
+}
+
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: white;
   color: #363b3b;
@@ -65,7 +73,7 @@ small {
 }
 
 .banner-headline {
-  margin: 150px 0 20px 150px;
+  margin: 150px 0 20px 100px;
   font-family: "Gilroy Light", sans-serif;
   font-weight: normal;
   font-size: 55px;
@@ -75,7 +83,7 @@ small {
 }
 
 .banner-text {
-  margin: 5px 5px 5px 150px;
+  margin: 5px 5px 5px 100px;
   font-family: "Source Sans Pro Regular", sans-serif;
   font-weight: normal;
   font-size: 20px;
@@ -99,12 +107,40 @@ small {
   height: 0;
 }
 
-.flex {
+.flex-cl {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-rw {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .grid {
   display: grid;
+}
+
+.heading-m {
+  margin: 40px 0 20px 0;
+  font-family: "Gilroy Light", sans-serif;
+  font-weight: normal;
+  font-size: 43px;
+  letter-spacing: -0.5px;
+  line-height: inherit;
+  color: midnightblue;
+}
+
+.heading-s {
+  margin: 10px auto;
+  font-family: "Gilroy Light", sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+  line-height: 30px;
+  color: midnightblue;
 }
 
 .hidden {
@@ -126,12 +162,12 @@ small {
 
 .rule {
   display: block;
+  border: 1px solid midnightblue;
+  border-bottom: none;
 }
 
 /* Navigation Bar */
 nav#navigation {
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: stretch;
   padding: 10px 0;
@@ -139,11 +175,10 @@ nav#navigation {
   z-index: 1;
   top: 0;
   left: 0;
-  border: 1px solid lightgrey;
   width: 100%;
   background-color: #fff;
   color: inherit;
-  transition: 0.3s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 nav#navigation div#nav-logo-container {
   display: inline-block;
@@ -159,7 +194,6 @@ nav#navigation div#nav-links-container a {
   display: inline-block;
   margin: 10px 5px;
   padding: 10px;
-  border-radius: 4px;
   font-family: "Gilroy Light", sans-serif;
   font-weight: bold;
   font-size: 13px;
@@ -175,7 +209,6 @@ nav#navigation div#nav-links-container a:hover {
   color: red;
 }
 nav#navigation div#nav-links-container a#cta {
-  border-radius: 0;
   font-family: "Gilroy Light", sans-serif;
   font-weight: bold;
   font-size: 13px;
@@ -196,56 +229,34 @@ nav#navigation div#nav-links-container a#cta:hover {
 section#page-banner {
   margin: 60px 0 0 0;
   padding: 50px 10px 150px 10px;
-  background-image: url(../images/mathew.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: scroll;
 }
 section#page-banner div h1 {
   color: midnightblue;
 }
 section#page-banner div p {
   width: 50%;
-  color: #363b3b;
 }
 
 /* Solutions  */
 section#solutions {
   padding: 50px 0 100px 0;
 }
-section#solutions h2 {
-  margin: 40px 0 20px 0;
-  font-family: "Gilroy Light", sans-serif;
-  font-weight: normal;
-  font-size: 43px;
-  letter-spacing: -0.5px;
-  line-height: inherit;
-  color: midnightblue;
-}
 section#solutions p {
   margin: 20px auto;
   width: 70%;
 }
 section#solutions div {
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
 }
 section#solutions div.card {
   margin: 20px;
-  width: 35%;
+  width: 27%;
   border-radius: 0;
 }
-section#solutions div.card h3 {
+section#solutions div.card p {
   margin: 10px auto;
-  font-family: "Gilroy Light", sans-serif;
-  font-weight: normal;
-  font-size: 18px;
-  letter-spacing: 0.2px;
-  line-height: 30px;
-  color: #363b3b;
+  width: 100%;
 }
 section#solutions a {
   display: inline-block;
@@ -261,8 +272,6 @@ section#solutions a:hover {
 /* Stats*/
 section#stats div.container_outer {
   padding: 40px 0;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   border-top: 1px solid lightgrey;
@@ -279,23 +288,19 @@ section#stats div.container_outer div.container_inner h2, section#stats div.cont
   letter-spacing: -0.5px;
   line-height: inherit;
 }
-section#stats div.container_outer div.container_inner h2 {
-  font-family: "Gilroy Light", sans-serif;
-  font-weight: normal;
-  font-size: 40px;
-  color: midnightblue;
-}
 section#stats div.container_outer div.container_inner img {
   padding: 0 60px;
 }
 section#stats div.container_outer div.container_inner span {
   display: inline-block;
   padding: 20px;
+  width: 100px;
+  height: 100px;
   border: 4px solid midnightblue;
   border-radius: 50%;
   font-family: "Gilroy Light", sans-serif;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 50px;
   background-color: #fff;
   color: midnightblue;
 }
@@ -311,15 +316,11 @@ section#stats div.container_outer div.container_inner p {
 section#stats div.container_outer div.container_inner small {
   margin: 10px;
 }
-section#stats div.container_outer div.container_inner.flex {
-  flex-direction: column;
-  flex-wrap: wrap;
+section#stats div.container_outer div.container_inner.flex-cl {
   justify-content: center;
   align-items: center;
 }
-section#stats div.container_outer div.container_inner.flex div.flex {
-  flex-direction: row;
-  flex-wrap: wrap;
+section#stats div.container_outer div.container_inner.flex-cl div.flex-rw {
   justify-content: space-between;
   align-items: center;
 }
@@ -328,54 +329,41 @@ section#stats div.container_outer div.container_inner.flex div.flex {
 section#carousel {
   padding: 100px 0;
 }
-section#carousel div {
-  flex-direction: row;
-  flex-wrap: wrap;
+section#carousel div#carousel-container {
+  justify-content: center;
+  align-items: center;
+}
+section#carousel div#carousel-container div {
   justify-content: center;
   align-items: stretch;
+  margin-top: 40px;
+  width: 85%;
 }
-section#carousel div.carousel-btn-l, section#carousel div.carousel-btn-r {
+section#carousel div#carousel-container div.carousel-btn-l, section#carousel div#carousel-container div.carousel-btn-r {
   display: inline-block;
   padding: 10px;
-  position: relative;
-  width: 70px;
+  width: 5%;
   height: 70px;
   border-radius: 50%;
   transition: 0.5s ease-in-out;
 }
-section#carousel div.carousel-btn-l:hover, section#carousel div.carousel-btn-r:hover {
+section#carousel div#carousel-container div.carousel-btn-l:hover, section#carousel div#carousel-container div.carousel-btn-r:hover {
   background-color: #fff;
   box-shadow: 2px 4px 10px rgba(211, 207, 207, 0.7);
 }
-section#carousel div.carousel-btn-l {
-  left: 40px;
-  top: 180px;
-}
-section#carousel div.carousel-btn-r {
-  left: 1240px;
-  bottom: 200px;
-}
-section#carousel div.card {
-  margin: 20px;
+section#carousel div#carousel-container div.card {
+  margin: 15px;
   width: 25%;
   border-radius: 0;
   background-color: #fff;
   box-shadow: 2px 2px 10px rgba(211, 207, 207, 0.7);
 }
-section#carousel div.card h3 {
-  margin: 5px auto;
-  font-family: "Gilroy Light", sans-serif;
-  font-weight: normal;
-  font-size: 20px;
-  letter-spacing: 0.2px;
-  line-height: 30px;
-  color: #363b3b;
+section#carousel div#carousel-container div.card h3 {
+  margin: 2px;
 }
 
 /* Threat Report */
 section#report {
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: stretch;
   background-color: red;
@@ -385,20 +373,9 @@ section#report div.container_text, section#report div.container_img {
   width: 50%;
 }
 section#report div.container_text {
-  flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 150px 0 130px 0;
-}
-section#report div.container_text h2 {
-  margin: 10px auto;
-  font-family: "Gilroy Light", sans-serif;
-  font-weight: normal;
-  font-size: 40px;
-  letter-spacing: -0.5px;
-  line-height: 40px;
-  color: #fff;
 }
 section#report div.container_text hr {
   margin: 20px auto;
@@ -409,7 +386,6 @@ section#report div.container_text hr {
 section#report div.container_text p {
   margin: 25px auto;
   padding: 0 30px;
-  color: #fff;
 }
 section#report div.container_text a {
   border: 1px solid #fff;
@@ -427,28 +403,25 @@ section#report div.container_img img {
 
 /* Trusted By */
 section#trusted {
-  padding: 40px;
-  padding-bottom: 20px;
+  padding: 60px 60px 80px 60px;
 }
 section#trusted h2 {
-  margin: 10px auto;
-  font-family: "Gilroy Light", sans-serif;
-  font-weight: normal;
-  font-size: 40px;
-  letter-spacing: -0.5px;
-  line-height: inherit;
-  color: midnightblue;
+  margin-top: 30px;
 }
 section#trusted p {
   margin: 20px auto;
   margin-bottom: 10px;
 }
+section#trusted hr {
+  margin: 35px auto;
+  margin-bottom: 0;
+  width: 90%;
+}
 section#trusted ul {
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: stretch;
-  margin: 0 auto;
+  margin: 10px auto;
+  margin-bottom: 0;
   padding: 0;
 }
 section#trusted ul li {
@@ -472,22 +445,11 @@ section#other-banner {
 section#try {
   padding: 40px;
 }
-section#try div#sign-up-container h3 {
-  margin: 10px auto;
-  font-family: "Gilroy Light", sans-serif;
-  font-weight: normal;
-  font-size: 40px;
-  letter-spacing: -0.5px;
-  line-height: inherit;
-  color: midnightblue;
-}
 section#try div#sign-up-container p {
   margin: 20px auto;
   margin-top: 5px;
 }
 section#try div#sign-up-container form {
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin: 10px auto;
@@ -523,17 +485,15 @@ footer {
 }
 footer nav#footer-nav {
   margin: 0 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
   margin: 0 auto;
 }
 footer nav#footer-nav div.column {
   display: inline-block;
-  margin: 10px 60px;
+  margin: 10px 40px;
   padding: 0;
-  width: 150px;
+  width: 12.5%;
 }
 footer nav#footer-nav div.column:nth-child(4) {
   margin-right: 0;
@@ -585,8 +545,6 @@ footer hr {
   border-bottom: none;
 }
 footer div#social {
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: stretch;
 }
@@ -674,10 +632,6 @@ footer p#copyright {
 }
 @media screen and (max-width: 789px) {
   section#try div#sign-up-container form {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     margin: 10px auto;
   }
   section#try div#sign-up-container form input {
@@ -685,13 +639,6 @@ footer p#copyright {
   }
 }
 @media screen and (max-width: 589px) {
-  section#try div#sign-up-container form {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 10px auto;
-  }
   section#try div#sign-up-container form input {
     margin-bottom: 20px;
     width: 97%;

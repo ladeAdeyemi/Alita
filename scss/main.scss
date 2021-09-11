@@ -9,13 +9,12 @@
 
 nav#navigation {
 
-    @include flexContainerStyles(row, wrap, space-around, stretch);
+    @include flexContainerStyles(space-around, stretch);
     @include paddingStyles(10px 0);
     @include positionStyles(fixed);
-    @include borderStyles(1px solid lightgrey, null, null);
     @include widthStyles(100%);
     @include colorStyles(#fff, inherit);
-    @include transitionStyles(0.3s ease-in-out);
+    @include transitionStyles(0.4s ease-in-out);
 
         div#nav-logo-container {
             @include displayStyles(inline-block);
@@ -34,7 +33,6 @@ nav#navigation {
                     @include displayStyles(inline-block);
                     @include marginStyles(10px 5px);
                     @include paddingStyles(10px);
-                    @include borderStyles(null, 4px, null);
                     @include fontStyles($fontNavLinks, bold, 13px);
                     @include textStyles(1px, auto, uppercase, null);
                     @include colorStyles(null, $colorMain);
@@ -49,7 +47,6 @@ nav#navigation {
                 }
           
                 a#cta {
-                    @include borderStyles(null, 0, null);
                     @include fontStyles($fontNavLinks, bold, 13px);
                     @include textStyles(1.5px, auto, uppercase, null);
                     margin-left: 100px;
@@ -72,7 +69,7 @@ section#page-banner {
     @include marginStyles(60px 0 0 0);
     @include paddingStyles(50px 10px 150px 10px);
     // @include gridContainerStyles($cols, $rows);
-    @include bgImageStyles(url(../images/mathew.jpg), no-repeat, center, cover, scroll);
+    // @include bgImageStyles(url(../images/mathew.jpg), no-repeat, center, cover, scroll);
 
     div {
 
@@ -84,7 +81,6 @@ section#page-banner {
 
             p {
                 width: 50%;
-                @include colorStyles(null, $colorOnWhite);
             }
 
     }
@@ -97,34 +93,26 @@ section#solutions {
 
     @include paddingStyles(50px 0 100px 0);
 
-        h2 {
-            @include marginStyles(40px 0 20px 0); 
-            @include fontStyles($fontHeadings, normal, 43px); 
-            @include textStyles($headlines, inherit, null, null);
-            @include colorStyles(null, $colorMain); 
-        }
-
         p {
             @include marginStyles(20px auto);
             @include widthStyles(70%);
         }
 
         div {
-            @include flexContainerStyles(row, wrap, center, stretch);
+            @include flexContainerStyles(center, stretch);
         }
 
         div.card {      
             @include marginStyles(20px);
-            @include widthStyles(35%); 
+            @include widthStyles(27%); 
             @include borderStyles(null, 0, null);
             @include colorStyles(null, null); 
 
-                h3 {
+                p {
                     @include marginStyles(10px auto);
-                    @include fontStyles($fontHeadings, normal, 18px);
-                    @include textStyles(0.2px, 30px, null, null);
-                    @include colorStyles(null, $colorOnWhite);
+                    @include widthStyles(100%);
                 }
+        
         }
 
         a {
@@ -147,7 +135,7 @@ section#stats {
     div.container_outer {
 
         @include paddingStyles(40px 0);
-        @include flexContainerStyles(row, wrap, center, center);
+        @include flexContainerStyles(center, center);
         border-top: 1px solid lightgrey; 
         border-bottom: 1px solid lightgrey;
         box-shadow: $solutions;
@@ -162,23 +150,19 @@ section#stats {
                     @include textStyles($headlines, inherit, null, null);
                 }
 
-                h2 {
-                    @include fontStyles($fontHeadings, normal, 40px); 
-                    @include colorStyles(null, $colorMain); 
-                }
-
                 img {
                     padding: 0 60px;
                 }
 
                 span {
                     @include displayStyles(inline-block);
-                    @include paddingStyles(20px); 
+                    @include paddingStyles(20px);
+                    width: 100px;
+                    height: 100px;
                     border: 4px solid $colorMain;
                     border-radius: 50%;
-                    @include fontStyles($fontHeadings, bold, 60px);
+                    @include fontStyles($fontHeadings, bold, 50px);
                     @include colorStyles($colorSecond, $colorMain);
-                    // @include boxShadowStyles(1px 1px 12px 2px grey);
                 }
 
                 p {
@@ -196,11 +180,11 @@ section#stats {
 
             }
 
-            div.container_inner.flex {
-                @include flexContainerStyles(column, wrap, center, center); 
+            div.container_inner.flex-cl {
+                @include flexContainerStyles(center, center); 
 
-                    div.flex {
-                        @include flexContainerStyles(row, wrap, space-between, center);
+                    div.flex-rw {
+                        @include flexContainerStyles(space-between, center);
                     }
             }
 
@@ -214,49 +198,41 @@ section#carousel {
 
     @include paddingStyles(100px 0);
 
-        div {
-            @include flexContainerStyles(row, wrap, center, stretch);
-        }
+        div#carousel-container {
+            @include flexContainerStyles(center, center);
 
-        div.carousel-btn-l, div.carousel-btn-r {
-            display: inline-block;
-            padding: 10px;
-            position: relative;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            transition: 0.5s ease-in-out;
-
-                &:hover {
-                    @include colorStyles($colorSecond, null);
-                    box-shadow:$boxShadowSpread;
-                }
-        }
-
-        div.carousel-btn-l {
-            left: 40px;
-            top: 180px;
-        }
-
-        div.carousel-btn-r {
-            left: 1240px;
-            bottom: 200px;
-        }
-
-        div.card {      
-            @include marginStyles(20px);
-            @include widthStyles($c4); 
-            @include borderStyles(null, 0, null);
-            @include colorStyles($colorSecond, null); 
-            @include boxShadowStyles($boxShadowDark);
-
-                h3 {
-                    @include marginStyles(5px auto);
-                    @include fontStyles($fontHeadings, normal, 20px);
-                    @include textStyles(0.2px, 30px, null, null);
-                    @include colorStyles(null, $colorOnWhite);
-                }
-
+            div {
+                @include flexContainerStyles(center, stretch);
+                margin-top: 40px;
+                width: 85%;
+            }
+    
+            div.carousel-btn-l, div.carousel-btn-r {
+                display: inline-block;
+                padding: 10px;
+                width: 5%;
+                height: 70px;
+                border-radius: 50%;
+                transition: 0.5s ease-in-out;
+    
+                    &:hover {
+                        @include colorStyles($colorSecond, null);
+                        box-shadow:$boxShadowSpread;
+                    }
+            }
+    
+            div.card {      
+                @include marginStyles(15px);
+                @include widthStyles($c4); 
+                @include borderStyles(null, 0, null);
+                @include colorStyles($colorSecond, null); 
+                @include boxShadowStyles($boxShadowDark);
+    
+                    h3 {
+                        margin: 2px;
+                    }
+    
+            }
         }
 
 }
@@ -265,7 +241,7 @@ section#carousel {
 
 section#report {
 
-    @include flexContainerStyles(row, wrap, space-evenly, stretch);
+    @include flexContainerStyles(space-evenly, stretch);
     background-color: $colorThird;
 
         div.container_text, div.container_img {
@@ -275,15 +251,8 @@ section#report {
 
         div.container_text {
 
-            @include flexContainerStyles(column, wrap, center, center);
+            @include flexContainerStyles(center, center);
             @include paddingStyles(150px 0 130px 0);
-          
-                h2 {
-                    @include marginStyles(10px auto);
-                    @include fontStyles($fontHeadings, normal, 40px);
-                    @include textStyles($headlines, 40px, null, null);
-                    @include colorStyles(null, $colorSecond);
-                }
 
                 hr {
                     @include hrStyles(20px auto, 90%, 1px solid rgba(255, 255, 255, 0.5));
@@ -292,7 +261,6 @@ section#report {
                 p {
                     @include marginStyles(25px auto);
                     @include paddingStyles(0 30px);
-                    @include colorStyles(null, $colorSecond);
                 }
 
                 a {
@@ -320,14 +288,10 @@ section#report {
 
 section#trusted {
 
-    padding: 40px;
-    padding-bottom: 20px;
+    padding: 60px 60px 80px 60px;
 
         h2 {
-            @include marginStyles(10px auto); 
-            @include fontStyles($fontHeadings, normal, 40px); 
-            @include textStyles($headlines, inherit, null, null);
-            @include colorStyles(null, $colorMain); 
+            margin-top: 30px;
         }
 
         p {
@@ -335,15 +299,16 @@ section#trusted {
             margin-bottom: 10px;
         }
 
-        // hr {
-        //     margin: 35px auto;
-        //     margin-bottom: 0;
-        //     width: 90%;
-        // }
+        hr {
+            margin: 35px auto;
+            margin-bottom: 0;
+            width: 90%;
+        }
 
         ul {
-            @include flexContainerStyles(row, wrap, space-evenly, stretch); 
-            @include marginStyles(0 auto); 
+            @include flexContainerStyles(space-evenly, stretch); 
+            @include marginStyles(10px auto);
+            margin-bottom: 0;
             @include paddingStyles(0); 
 
                 li {
@@ -369,20 +334,13 @@ section#try {
 
         div#sign-up-container {
 
-            h3 {
-                @include marginStyles(10px auto); 
-                @include fontStyles($fontHeadings, normal, 40px); 
-                @include textStyles($headlines, inherit, null, null);
-                @include colorStyles(null, $colorMain);   
-            }
-
             p {
                 @include marginStyles(20px auto);
                 margin-top: 5px;
             }
 
             form {
-                @include flexContainerStyles(row, wrap, center, center); 
+                @include flexContainerStyles(center, center); 
                 margin: 10px auto;
 
                     input {
@@ -421,14 +379,14 @@ footer {
 
         nav#footer-nav {
             @include marginStyles(0 auto);
-            @include flexContainerStyles(row, wrap, center, stretch);
+            @include flexContainerStyles(center, stretch);
             @include marginStyles(0 auto);
              
                  div.column {
                      @include displayStyles(inline-block);
-                     @include marginStyles(10px 60px);
+                     @include marginStyles(10px 40px);
                      @include paddingStyles(0);
-                     @include widthStyles(150px);
+                     @include widthStyles(12.5%);
 
                         &:nth-child(4) {
                             margin-right: 0;
@@ -479,9 +437,10 @@ footer {
 
         div#social {
 
-            @include flexContainerStyles(row, wrap, space-around, stretch);
+            @include flexContainerStyles(space-around, stretch);
 
                 div#social-media-container {
+
                     align-self: center;
         
                         a {
@@ -533,7 +492,9 @@ footer {
         div#sign-up-container {
 
             form {
-                @include flexContainerStyles(row, wrap, center, center); 
+                flex-direction: row;
+                flex-wrap: wrap;
+                @include flexContainerStyles(center, center); 
                 margin: 10px auto;
 
                     input {
@@ -566,7 +527,9 @@ footer {
     }
 
     footer div#social {
-        @include flexContainerStyles(column, wrap, center, center);
+        flex-direction: column;
+        flex-wrap: wrap;
+        @include flexContainerStyles(center, center);
 
             div#social-media-container, div#footer-logo-container img, p#copyright {
                 @include marginStyles(5px auto);
@@ -592,7 +555,6 @@ footer {
             div#sign-up-container {
     
                 form {
-                    @include flexContainerStyles(row, wrap, center, center); 
                     margin: 10px auto;
     
                         input {
@@ -612,8 +574,6 @@ footer {
             div#sign-up-container {
     
                 form {
-                    @include flexContainerStyles(row, wrap, center, center); 
-                    margin: 10px auto;
     
                         input {
                             margin-bottom: 20px;

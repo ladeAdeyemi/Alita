@@ -8,7 +8,7 @@
 
 @include gridContainerStyles($cols, $rows);
 @include gridItemStyles($col, $row);
-@include flexContainerStyles($direction, $wrp, $justify, $align); 
+@include flexContainerStyles($justify, $align); 
 @include flexItemStyles($grow, $align); 
 @include displayStyles($disp);
 @include marginStyles($margin); 

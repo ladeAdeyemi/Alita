@@ -17,6 +17,7 @@
     font-family: $fontParagraphs;
     text-decoration: none;
     transition: 0.3s ease;
+    // list-style: none;
 }
 
 // GRID 
@@ -33,9 +34,7 @@
 
 // FLEXBOX
 
-@mixin flexContainerStyles($direction, $wrp, $justify, $align) {
-    flex-direction: $direction;
-    flex-wrap: $wrp;
+@mixin flexContainerStyles($justify, $align) {
     justify-content: $justify;
     align-items: $align;
 }

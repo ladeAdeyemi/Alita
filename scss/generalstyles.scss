@@ -11,6 +11,29 @@
     @include universalStyles;
   }
   
+*::before {
+    box-sizing: border-box;
+  }
+  
+*::after {
+    box-sizing: border-box;
+  }
+
+// a#top-link {
+//     justify-content: center;
+//     align-content: center;
+//     @include paddingStyles(20px); 
+//     @include positionStyles(fixed);
+//     top: 530px;
+//     left: 90%;
+//     @include widthStyles(50px); 
+//     @include heightStyles(50px);
+//     border-radius: 50%;
+//     font-family: $fontHeadings;
+//     @include colorStyles($colorMain, $colorSecond);
+//     transition: 0.3s ease-in;
+// }
+  
 body {
     @include colorStyles(white, $colorOnWhite);
 }
@@ -49,14 +72,13 @@ small {
 }
 
 .banner-headline {
-    @include marginStyles(150px 0 20px 150px);
+    @include marginStyles(150px 0 20px 100px);
     @include fontStyles($fontHeadings, normal, 55px);
     @include textStyles($headlines, 55px, auto, null);
 }
 
 .banner-text {
-    @include marginStyles(5px 5px 5px 150px);
-    // @include paddingStyles(10px);
+    @include marginStyles(5px 5px 5px 100px);
     @include fontStyles($fontParagraphs, normal, 20px);
     @include textStyles(1px, 30px, null, null);
 }
@@ -72,15 +94,34 @@ small {
     height: 0;
 }
 
-.flex {
-    // -webkit-box-flex: flex;
-    // -moz-box-flex: flex;
-    // -ms-flex: flex;
+.flex-cl {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-rw {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .grid {
     display: grid;
+}
+
+.heading-m {
+    @include marginStyles(40px 0 20px 0); 
+    @include fontStyles($fontHeadings, normal, 43px); 
+    @include textStyles($headlines, inherit, null, null);
+    @include colorStyles(null, $colorMain); 
+}
+
+.heading-s {
+    @include marginStyles(10px auto);
+    @include fontStyles($fontHeadings, normal, 20px);
+    @include textStyles(0.2px, 30px, null, null);
+    @include colorStyles(null, $colorMain);
 }
 
 .hidden {
@@ -102,9 +143,6 @@ small {
 
 .rule {
     @include displayStyles(block);
+    border: 1px solid $colorMain;
+    border-bottom: none;
 }
-
-// .zero-padding {
-//     padding: 0;
-// }
-

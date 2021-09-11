@@ -1,6 +1,6 @@
 // VARIABLE & CONSTANT DECLARATIONS
 
-const navBar = document.querySelector('nav#navigation.flex');
+const navBar = document.querySelector('nav#navigation.flex-rw');
 
 // EVENT LISTENERS
 
