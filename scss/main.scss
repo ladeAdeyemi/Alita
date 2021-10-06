@@ -13,6 +13,7 @@ nav#navigation {
     @include paddingStyles(10px 0);
     @include positionStyles(fixed);
     @include widthStyles(100%);
+    // border-bottom: 1px solid lightgrey;
     @include colorStyles(#fff, inherit);
     @include transitionStyles(0.4s ease-in-out);
 
@@ -68,8 +69,9 @@ section#page-banner {
 
     @include marginStyles(60px 0 0 0);
     @include paddingStyles(50px 10px 150px 10px);
+    height: 700px;
     // @include gridContainerStyles($cols, $rows);
-    // @include bgImageStyles(url(../images/mathew.jpg), no-repeat, center, cover, scroll);
+    @include bgImageStyles(url(../images/mathew.jpg), no-repeat, center, cover, scroll);
 
     div {
 
@@ -80,21 +82,104 @@ section#page-banner {
             }
 
             p {
+                margin-bottom: 40px;
                 width: 50%;
+
+            }
+
+            a.cta {
+                @include marginStyles(25px 5px 5px 100px);
+                letter-spacing: 1px;
+                @include colorStyles($colorMain, $colorSecond);
             }
 
     }
 
 }
 
+/* Trusted By */
+
+section#trusted {
+
+    padding: 20px 80px;
+    // padding: 60px 60px 80px 60px;
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        p {
+            @include marginStyles(20px auto);
+            margin-bottom: 10px;
+        }
+
+        hr {
+            margin: 35px auto;
+            margin-bottom: 0;
+            width: 90%;
+        }
+
+        ul {
+            @include flexContainerStyles(space-evenly, stretch); 
+            @include marginStyles(10px auto);
+            margin-bottom: 0;
+            @include paddingStyles(0); 
+
+                li {
+                    @include marginStyles(5px); 
+                    @include paddingStyles(0 20px);
+                    @include widthStyles(15%);  
+                }
+        }
+}
+
+/* Threat Report */
+
+section#report {
+
+    // @include flexContainerStyles(space-evenly, flex-start);
+    @include bgImageStyles(url(../images/red2.jpg), no-repeat, center, cover, scroll);
+    // background-color: $colorThird;
+
+        div.container_text, div.container_img {
+            @include marginStyles(0);
+            @include widthStyles(50%);
+        }
+
+        div.container_text {
+
+            @include flexContainerStyles(center, center);
+            @include paddingStyles(150px 0 130px 0);
+
+                p {
+                    @include marginStyles(25px auto);
+                    @include paddingStyles(0 30px);
+                }
+
+                div.flex-rw  {
+                    @include flexContainerStyles(space-evenly, stretch);
+
+                    a.cta {
+                        @include borderStyles(1px solid $colorSecond, 0, none);
+                        @include colorStyles(null, $colorSecond);
+                   
+                            &:hover {
+                                @include colorStyles($colorSecond, $colorThird);
+                            }
+                    }
+                }
+        }
+}
+
 /* Solutions  */
 
 section#solutions {
 
-    @include paddingStyles(50px 0 100px 0);
+    @include paddingStyles(50px 0 80px 0);
 
         p {
             @include marginStyles(20px auto);
+            margin-bottom: 40px;
             @include widthStyles(70%);
         }
 
@@ -103,21 +188,42 @@ section#solutions {
         }
 
         div.card {      
-            @include marginStyles(20px);
+            @include marginStyles(0 20px);
             @include widthStyles(27%); 
-            @include borderStyles(null, 0, null);
-            @include colorStyles(null, null); 
+            @include borderStyles(null, 4px, null);
+            @include colorStyles(null, null);
+            // box-shadow: $boxShadowSpread;
+
+                img {
+                    // margin: 0 auto;
+                    // padding: 30px;
+                    border-radius: 4px;
+                    // width: 150px;
+                    // height: 150px;
+
+                }
+
+                h3 {
+                    font-family: $fontHeadings;
+                    @include marginStyles(20px auto);
+                    margin-bottom: 10px;
+                    @include widthStyles(100%);
+                    text-transform: uppercase;
+                    color: $colorMain;
+                }
 
                 p {
-                    @include marginStyles(10px auto);
-                    @include widthStyles(100%);
+                    margin: 10px auto;
+                    margin-bottom: 30px;
+                    @include widthStyles(90%);
+
                 }
-        
         }
 
         a {
             @include displayStyles(inline-block);
             @include marginStyles(10px auto);
+            margin-top: 10px;
             font-weight: normal;
             @include colorStyles($colorMain, $colorSecond);
 
@@ -150,6 +256,10 @@ section#stats {
                     @include textStyles($headlines, inherit, null, null);
                 }
 
+                // p#rave {
+                //     font-size:
+                // }
+
                 img {
                     padding: 0 60px;
                 }
@@ -169,9 +279,9 @@ section#stats {
                     @include marginStyles(40px); 
                     @include paddingStyles(5px);
                     min-width: 350px;
-                    @include fontStyles('Source Sans Pro Light', null, 30px); 
+                    @include fontStyles($fontSubheadings, null, 30px); 
                     letter-spacing: -0.5px;
-                    @include colorStyles(null, #2f2b2b); 
+                    @include colorStyles(null, $colorOnWhite); 
                 }
 
                 small {
@@ -196,7 +306,7 @@ section#stats {
 
 section#carousel {
 
-    @include paddingStyles(100px 0);
+    @include paddingStyles(50px 0);
 
         div#carousel-container {
             @include flexContainerStyles(center, center);
@@ -213,7 +323,7 @@ section#carousel {
                 width: 5%;
                 height: 70px;
                 border-radius: 50%;
-                transition: 0.5s ease-in-out;
+                transition: 0.3s ease-in-out;
     
                     &:hover {
                         @include colorStyles($colorSecond, null);
@@ -223,100 +333,40 @@ section#carousel {
     
             div.card {      
                 @include marginStyles(15px);
-                @include widthStyles($c4); 
+                @include widthStyles(30%); 
                 @include borderStyles(null, 0, null);
                 @include colorStyles($colorSecond, null); 
                 @include boxShadowStyles($boxShadowDark);
     
                     h3 {
-                        margin: 2px;
+                        margin: 12px;
+                        text-transform: uppercase;
                     }
     
             }
         }
 
-}
-
-/* Threat Report */
-
-section#report {
-
-    @include flexContainerStyles(space-evenly, stretch);
-    background-color: $colorThird;
-
-        div.container_text, div.container_img {
-            @include marginStyles(0);
-            @include widthStyles(50%);
-        }
-
-        div.container_text {
-
+        div#carousel-navigation {
             @include flexContainerStyles(center, center);
-            @include paddingStyles(150px 0 130px 0);
+            margin-top: 30px;
 
-                hr {
-                    @include hrStyles(20px auto, 90%, 1px solid rgba(255, 255, 255, 0.5));
-                }
+                div.carousel-dot {
+                    margin: 10px 20px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    border: 1px solid $colorMain;
 
-                p {
-                    @include marginStyles(25px auto);
-                    @include paddingStyles(0 30px);
-                }
-
-                a {
-                    @include borderStyles(1px solid $colorSecond, 0, none);
-                    @include colorStyles(null, $colorSecond);
-               
                         &:hover {
-                            @include colorStyles($colorSecond, $colorThird);
+                            cursor: pointer;
                         }
                 }
 
-        }
-
-        div.container_img {
-
-            img {
-                @include heightStyles(100%);
-            }
-
-        }
-               
-}
-
-/* Trusted By */
-
-section#trusted {
-
-    padding: 60px 60px 80px 60px;
-
-        h2 {
-            margin-top: 30px;
-        }
-
-        p {
-            @include marginStyles(20px auto);
-            margin-bottom: 10px;
-        }
-
-        hr {
-            margin: 35px auto;
-            margin-bottom: 0;
-            width: 90%;
-        }
-
-        ul {
-            @include flexContainerStyles(space-evenly, stretch); 
-            @include marginStyles(10px auto);
-            margin-bottom: 0;
-            @include paddingStyles(0); 
-
-                li {
-                    @include marginStyles(5px); 
-                    @include paddingStyles(0 20px);
-                    @include widthStyles(15%);  
+                div.active {
+                    background-color: $colorMain;
                 }
         }
+
 }
 
 /* Other Banner */

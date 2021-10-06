@@ -72,7 +72,7 @@ small {
 }
 
 .banner-headline {
-    @include marginStyles(150px 0 20px 100px);
+    @include marginStyles(180px 0 20px 100px);
     @include fontStyles($fontHeadings, normal, 55px);
     @include textStyles($headlines, 55px, auto, null);
 }
@@ -84,9 +84,8 @@ small {
 }
 
 .cta {
-    @include marginStyles(10px auto);
     @include paddingStyles(10px); 
-    @include fontStyles($fontSubheadings, bold, 16px);
+    @include fontStyles($fontHeadings, bold, 16px);
     @include textStyles(0.5px, 25px, uppercase, none);
 }
 
@@ -119,13 +118,13 @@ small {
 
 .heading-s {
     @include marginStyles(10px auto);
-    @include fontStyles($fontHeadings, normal, 20px);
+    @include fontStyles($fontHeadings, normal, 22px);
     @include textStyles(0.2px, 30px, null, null);
     @include colorStyles(null, $colorMain);
 }
 
 .hidden {
-    visibility: none;
+    opacity: 0;
 }
 
 .list-item {

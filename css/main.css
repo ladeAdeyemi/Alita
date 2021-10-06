@@ -73,7 +73,7 @@ small {
 }
 
 .banner-headline {
-  margin: 150px 0 20px 100px;
+  margin: 180px 0 20px 100px;
   font-family: "Gilroy Light", sans-serif;
   font-weight: normal;
   font-size: 55px;
@@ -92,7 +92,6 @@ small {
 }
 
 .cta {
-  margin: 10px auto;
   padding: 10px;
   font-family: "Gilroy Light", sans-serif;
   font-weight: bold;
@@ -137,14 +136,14 @@ small {
   margin: 10px auto;
   font-family: "Gilroy Light", sans-serif;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: 0.2px;
   line-height: 30px;
   color: midnightblue;
 }
 
 .hidden {
-  visibility: none;
+  opacity: 0;
 }
 
 .list-item {
@@ -229,20 +228,99 @@ nav#navigation div#nav-links-container a#cta:hover {
 section#page-banner {
   margin: 60px 0 0 0;
   padding: 50px 10px 150px 10px;
+  height: 700px;
+  background-image: url(../images/mathew.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
 }
 section#page-banner div h1 {
   color: midnightblue;
 }
 section#page-banner div p {
+  margin-bottom: 40px;
   width: 50%;
+}
+section#page-banner div a.cta {
+  margin: 25px 5px 5px 100px;
+  letter-spacing: 1px;
+  background-color: midnightblue;
+  color: #fff;
+}
+
+/* Trusted By */
+section#trusted {
+  padding: 20px 80px;
+}
+section#trusted h2 {
+  margin-top: 30px;
+}
+section#trusted p {
+  margin: 20px auto;
+  margin-bottom: 10px;
+}
+section#trusted hr {
+  margin: 35px auto;
+  margin-bottom: 0;
+  width: 90%;
+}
+section#trusted ul {
+  justify-content: space-evenly;
+  align-items: stretch;
+  margin: 10px auto;
+  margin-bottom: 0;
+  padding: 0;
+}
+section#trusted ul li {
+  margin: 5px;
+  padding: 0 20px;
+  width: 15%;
+}
+
+/* Threat Report */
+section#report {
+  background-image: url(../images/red2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+}
+section#report div.container_text, section#report div.container_img {
+  margin: 0;
+  width: 50%;
+}
+section#report div.container_text {
+  justify-content: center;
+  align-items: center;
+  padding: 150px 0 130px 0;
+}
+section#report div.container_text p {
+  margin: 25px auto;
+  padding: 0 30px;
+}
+section#report div.container_text div.flex-rw {
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+section#report div.container_text div.flex-rw a.cta {
+  border: 1px solid #fff;
+  border-radius: 0;
+  outline: none;
+  color: #fff;
+}
+section#report div.container_text div.flex-rw a.cta:hover {
+  background-color: #fff;
+  color: red;
 }
 
 /* Solutions  */
 section#solutions {
-  padding: 50px 0 100px 0;
+  padding: 50px 0 80px 0;
 }
 section#solutions p {
   margin: 20px auto;
+  margin-bottom: 40px;
   width: 70%;
 }
 section#solutions div {
@@ -250,17 +328,30 @@ section#solutions div {
   align-items: stretch;
 }
 section#solutions div.card {
-  margin: 20px;
+  margin: 0 20px;
   width: 27%;
-  border-radius: 0;
+  border-radius: 4px;
+}
+section#solutions div.card img {
+  border-radius: 4px;
+}
+section#solutions div.card h3 {
+  font-family: "Gilroy Light", sans-serif;
+  margin: 20px auto;
+  margin-bottom: 10px;
+  width: 100%;
+  text-transform: uppercase;
+  color: midnightblue;
 }
 section#solutions div.card p {
   margin: 10px auto;
-  width: 100%;
+  margin-bottom: 30px;
+  width: 90%;
 }
 section#solutions a {
   display: inline-block;
   margin: 10px auto;
+  margin-top: 10px;
   font-weight: normal;
   background-color: midnightblue;
   color: #fff;
@@ -308,10 +399,10 @@ section#stats div.container_outer div.container_inner p {
   margin: 40px;
   padding: 5px;
   min-width: 350px;
-  font-family: "Source Sans Pro Light";
+  font-family: "Source Sans Pro Light", sans-serif;
   font-size: 30px;
   letter-spacing: -0.5px;
-  color: #2f2b2b;
+  color: #363b3b;
 }
 section#stats div.container_outer div.container_inner small {
   margin: 10px;
@@ -327,7 +418,7 @@ section#stats div.container_outer div.container_inner.flex-cl div.flex-rw {
 
 /* Carousel  */
 section#carousel {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 section#carousel div#carousel-container {
   justify-content: center;
@@ -345,7 +436,7 @@ section#carousel div#carousel-container div.carousel-btn-l, section#carousel div
   width: 5%;
   height: 70px;
   border-radius: 50%;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 section#carousel div#carousel-container div.carousel-btn-l:hover, section#carousel div#carousel-container div.carousel-btn-r:hover {
   background-color: #fff;
@@ -353,81 +444,32 @@ section#carousel div#carousel-container div.carousel-btn-l:hover, section#carous
 }
 section#carousel div#carousel-container div.card {
   margin: 15px;
-  width: 25%;
+  width: 30%;
   border-radius: 0;
   background-color: #fff;
   box-shadow: 2px 2px 10px rgba(211, 207, 207, 0.7);
 }
 section#carousel div#carousel-container div.card h3 {
-  margin: 2px;
+  margin: 12px;
+  text-transform: uppercase;
 }
-
-/* Threat Report */
-section#report {
-  justify-content: space-evenly;
-  align-items: stretch;
-  background-color: red;
-}
-section#report div.container_text, section#report div.container_img {
-  margin: 0;
-  width: 50%;
-}
-section#report div.container_text {
+section#carousel div#carousel-navigation {
   justify-content: center;
   align-items: center;
-  padding: 150px 0 130px 0;
-}
-section#report div.container_text hr {
-  margin: 20px auto;
-  width: 90%;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: none;
-}
-section#report div.container_text p {
-  margin: 25px auto;
-  padding: 0 30px;
-}
-section#report div.container_text a {
-  border: 1px solid #fff;
-  border-radius: 0;
-  outline: none;
-  color: #fff;
-}
-section#report div.container_text a:hover {
-  background-color: #fff;
-  color: red;
-}
-section#report div.container_img img {
-  height: 100%;
-}
-
-/* Trusted By */
-section#trusted {
-  padding: 60px 60px 80px 60px;
-}
-section#trusted h2 {
   margin-top: 30px;
 }
-section#trusted p {
-  margin: 20px auto;
-  margin-bottom: 10px;
+section#carousel div#carousel-navigation div.carousel-dot {
+  margin: 10px 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid midnightblue;
 }
-section#trusted hr {
-  margin: 35px auto;
-  margin-bottom: 0;
-  width: 90%;
+section#carousel div#carousel-navigation div.carousel-dot:hover {
+  cursor: pointer;
 }
-section#trusted ul {
-  justify-content: space-evenly;
-  align-items: stretch;
-  margin: 10px auto;
-  margin-bottom: 0;
-  padding: 0;
-}
-section#trusted ul li {
-  margin: 5px;
-  padding: 0 20px;
-  width: 15%;
+section#carousel div#carousel-navigation div.active {
+  background-color: midnightblue;
 }
 
 /* Other Banner */

@@ -2,12 +2,28 @@
 
 const navBar = document.querySelector('nav#navigation.flex-rw');
 
+const carouselContainer = document.querySelectorAll('#carousel-container');
+const carouselNav = document.querySelectorAll('#carousel-navigation');
+const carouselDots = document.querySelectorAll('.carousel-dot');
+
+Array.from(carouselDots).forEach((dot) => dot.addEventListener('click', carouselHandler));
+
 // EVENT LISTENERS
 
 window.addEventListener('scroll', alterPadding);
 // window.addEventListener('scroll', slideNavBar);
 
 // FUNCTIONS
+
+function carouselHandler (e) {
+
+    if (e.target.className == 'active') return;
+
+        e.target.classList.add('active');
+        e.target.previousElementSibling.classList.remove('active');
+        e.target.nextElementSibling.classList.remove('active');
+      
+}
 
 function alterPadding () {
 
@@ -35,3 +51,5 @@ function alterPadding () {
 //         navBar.style.transform = 'translateY(50px)';
 //     }
 // }
+
+
